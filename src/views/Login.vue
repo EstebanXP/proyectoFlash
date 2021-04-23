@@ -6,11 +6,12 @@
             <input type="password" placeholder="Contraseña" v-model="password">
             <input type="submit" value="Iniciar Sesión">
             <p>¿No tienes una cuenta? <router-link to="/register">Registrate aquí</router-link></p>
-        </form>    
+        </form>
+    </div>
+    <div class="logInGoogle">
+        <button @click="LoginG">Inicia sesion aquí con tu cuenta Google</button>
     </div>
 </template>
-
-
 
 <script>
 import {ref} from 'vue';
@@ -20,6 +21,7 @@ export default {
     setup(){
         const email = ref("");
         const password = ref("");
+
         const Login = () =>{
             firebase
                 .auth()
@@ -28,12 +30,29 @@ export default {
                 .catch(err=>alert(err.message))
         }
 
+        const LoginG=()=>{
+            const provider= new firebase.auth.GoogleAuthProvider();
+            firebase.auth().signInWithPopup(provider).then(()=>{
+                alert("Sesion iniciada");
+            }).catch(err=>{
+                console.log(err);
+            });
+        }
+
+        
+
         return{
             Login,
             email,
-            password
+            password,
+            LoginG
+        
         }
     }
+
+    
+
+
 }
 
 </script>
