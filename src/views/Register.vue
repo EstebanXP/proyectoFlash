@@ -1,6 +1,9 @@
 <template>
     <div class="register">
+        <!-- Esta es la parte de arriba del registro, donde dice registro-->
         <h1>Registro</h1>
+
+        <!--Aqui empieza el formulario del registro-->
         <form @submit.prevent="Register">
             <div class="container">
                 <input type="text" placeholder="Email" v-model="email"/><br><br>

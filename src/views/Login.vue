@@ -1,6 +1,11 @@
 <template>
     <div class="login">
+        <!-- Esta es la parte de arriba del login, donde dice Login -->
         <h1>Log in</h1>
+        <!-- Creo que por aqui debe estar la imagen del logo-->
+        <!-- Creo que por aqui debe finalizar la imagen del logo-->
+
+        <!--Aqui empieza el formulario del login-->
         <form @submit.prevent="Login">
             <input type="text" placeholder="Email" v-model="email">
             <input type="password" placeholder="Contraseña" v-model="password">
