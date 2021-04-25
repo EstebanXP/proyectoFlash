@@ -12,6 +12,7 @@
             <input type="submit" value="Iniciar Sesión">
             <p>¿No tienes una cuenta? <router-link to="/register">Registrate aquí</router-link></p>
         </form>
+        <!--Aqui termina el formulario del login-->
     </div>
     <div class="logInGoogle">
         <button @click="LoginG">Inicia sesion aquí con tu cuenta Google</button>

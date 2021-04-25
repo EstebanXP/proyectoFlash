@@ -12,6 +12,7 @@
                 <p>¿Ya tienes una cuenta?<router-link to="/Login"> Inicia sesion aquí</router-link></p>
             </div>
         </form>
+        <!--Aqui termina el formulario del registro-->
     </div> 
 </template> 
 
