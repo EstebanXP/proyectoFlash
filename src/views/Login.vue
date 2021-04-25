@@ -14,9 +14,11 @@
         </form>
         <!--Aqui termina el formulario del login-->
     </div>
+    <!--Aqui empieza el boton de login con gmail-->
     <div class="logInGoogle">
         <button @click="LoginG">Inicia sesion aquí con tu cuenta Google</button>
     </div>
+    <!--Aqui termina el boton de login con gmail-->
 </template>
 
 <script>
