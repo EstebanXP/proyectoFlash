@@ -21,7 +21,7 @@ export default {
     setup(){
         const email = ref("");
         const password = ref("");
-
+        //Esta es la funcion que hace que jale el login con usuario y contraseña
         const Login = () =>{
             firebase
                 .auth()
@@ -29,7 +29,7 @@ export default {
                 .then(data=>console.log(data))
                 .catch(err=>alert(err.message))
         }
-
+        //Esta es la funcion que hace que jale el login con gmail
         const LoginG=()=>{
             const provider= new firebase.auth.GoogleAuthProvider();
             firebase.auth().signInWithPopup(provider).then(()=>{
@@ -40,7 +40,7 @@ export default {
         }
 
         
-
+        //Estas variables son las que hacen que se puedan llamar externamente las funciones
         return{
             Login,
             email,

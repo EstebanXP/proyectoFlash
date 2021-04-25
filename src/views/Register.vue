@@ -19,7 +19,7 @@ export default {
     setup() {
         const email=ref("");
         const password=ref("");
-        
+        //Esta es la funcion para registrar usuarios
         const Register = () =>{
             firebase
                 .auth()
@@ -29,7 +29,7 @@ export default {
                 })
                 .catch(err=>alert(err.message));
         }
-
+        //Estas variables son las que hacen que se puedan llamar externamente las funciones
         return{
             Register,
             email,
