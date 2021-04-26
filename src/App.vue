@@ -27,10 +27,17 @@ export default {
 </script>
 
 <style lang="scss">
-body{
-  background:#2c3e50;
-  color:#FFF;
+@font-face {
+  font-family: "CodeNext";
+  src: local("CodeNext"),
+  url(./fonts/CodeNext-SemiBold.ttf) format("truetype");
 }
+@font-face {
+  font-family: "CodeNextItalic";
+  src: local("CodeNextItalic"),
+  url(./fonts/CodeNext-SemiBoldItalic.ttf) format("truetype");
+}
+
 
 
 

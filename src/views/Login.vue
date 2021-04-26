@@ -1,29 +1,34 @@
 <template>
     <div class="container-fluid gradient back">
         <div class="login">
-             <h1>bienvenido de nuevo,<br> estudiante</h1>
-            <div class=logologin>
-                <img src="../assets/logo.png" style="width:12%; min-width:150px"  >
+             <h1 class="pad-top">bienvenido de<br>nuevo, estudiante</h1>
+            <div class="pad-top">
+                <img src="../assets/logo.png" style="width:11%; min-width:140px"  >
             </div>
             
             <!-- Esta es la parte de arriba del login, donde dice Login -->
-            <h1>INICIA SESIÓN</h1>
+            <h1 class="pad-top">INICIA SESIÓN</h1>
             <!-- Creo que por aqui debe estar la imagen del logo-->
             <!-- Creo que por aqui debe finalizar la imagen del logo-->
 
             <!--Aqui empieza el formulario del login-->
             <form @submit.prevent="Login">
-                <input type="text" placeholder="Email" v-model="email"><br>
-                <input type="password" placeholder="Contraseña" v-model="password"><br>
+                <input type="text" placeholder="email" v-model="email"><br>
+                <input type="password" placeholder="contraseña" v-model="password"><br>
                 <input type="submit" value="Iniciar Sesión">
-                <p>¿No tienes una cuenta? <router-link to="/register">Registrate aquí</router-link></p>
+                <div class="logInGoogle">
+                    <button @click="LoginG">Inicia sesion aquí con tu cuenta Google</button>
+                </div>
+                <h1>O</h1> 
+                <div class=" btn yellow-button">
+                    <router-link to="/register"><h1>crea una <br> cuenta nueva</h1></router-link>
+                </div>
+                
             </form>
             <!--Aqui termina el formulario del login-->
         </div>
         <!--Aqui empieza el boton de login con gmail-->
-        <div class="logInGoogle">
-            <button @click="LoginG">Inicia sesion aquí con tu cuenta Google</button>
-        </div>
+        
         <!--Aqui termina el boton de login con gmail-->
         </div>
     <div>
