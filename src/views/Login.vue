@@ -1,6 +1,7 @@
 <template>
     <div class="container-fluid gradient back">
         <div class="login">
+            <img src="../assets/logo.png">
             <!-- Esta es la parte de arriba del login, donde dice Login -->
             <h1>Log in</h1>
             <!-- Creo que por aqui debe estar la imagen del logo-->
