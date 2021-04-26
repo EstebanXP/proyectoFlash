@@ -1,5 +1,5 @@
 <template>
-    <div class="container-fluid">
+    <div class="container-fluid gradient back">
         <div class="login">
             <!-- Esta es la parte de arriba del login, donde dice Login -->
             <h1>Log in</h1>

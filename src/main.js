@@ -4,7 +4,6 @@ import router from './router'
 import firebase from 'firebase'
 import  './assets/css/main.css'
 
-
 const firebaseConfig = {
     apiKey: "AIzaSyA1AHqjm0mQxyGRzgyAePdmL0DW6iqdBN4",
     authDomain: "flash-85bad.firebaseapp.com",
