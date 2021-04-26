@@ -1,16 +1,20 @@
 <template>
     <div class="container-fluid gradient back">
         <div class="login">
-            <img src="../assets/logo.png">
+             <h1>bienvenido de nuevo,<br> estudiante</h1>
+            <div class=logologin>
+                <img src="../assets/logo.png" style="width:12%; min-width:150px"  >
+            </div>
+            
             <!-- Esta es la parte de arriba del login, donde dice Login -->
-            <h1>Log in</h1>
+            <h1>INICIA SESIÓN</h1>
             <!-- Creo que por aqui debe estar la imagen del logo-->
             <!-- Creo que por aqui debe finalizar la imagen del logo-->
 
             <!--Aqui empieza el formulario del login-->
             <form @submit.prevent="Login">
-                <input type="text" placeholder="Email" v-model="email">
-                <input type="password" placeholder="Contraseña" v-model="password">
+                <input type="text" placeholder="Email" v-model="email"><br>
+                <input type="password" placeholder="Contraseña" v-model="password"><br>
                 <input type="submit" value="Iniciar Sesión">
                 <p>¿No tienes una cuenta? <router-link to="/register">Registrate aquí</router-link></p>
             </form>
