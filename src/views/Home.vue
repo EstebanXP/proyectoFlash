@@ -4,7 +4,6 @@
     <router-link to="/about"></router-link> <br>
     <button class="logout" @click="Logout">Cerrar Sesión</button>
     <!--Fer esta aplicacion te la dedico-->
-    <!--Fer esta aplicacion yo te la desdedico-->
   </div>
 </template>
 
