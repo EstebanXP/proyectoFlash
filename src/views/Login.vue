@@ -19,6 +19,7 @@
         <button @click="LoginG">Inicia sesion aquí con tu cuenta Google</button>
     </div>
     <!--Aqui termina el boton de login con gmail-->
+   
 </template>
 
 <script>
