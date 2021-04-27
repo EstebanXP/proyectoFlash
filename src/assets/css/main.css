@@ -19,11 +19,8 @@
 .inp {
     border-radius: 10px;
     margin: 7px;
-}
-
-.inp {
-    border-radius: 10px;
-    margin: 7px;
+    width: 60%;
+    padding-top: 3px;
 }
 
 .btn-inis {
@@ -34,12 +31,19 @@
 .btn-google {
     border-radius: 10px;
     margin: 7px;
+   
+    max-width: 200px;
+    
 }
 
 .yellow-button {
     background-color: #EBC409;
-    width: 60%;
+    width: 50%;
     color: #32409F;
+    font-family: "CodeNextItalic", Arial, Helvetica, sans-serif;
+    font-size: 110%;
+    border-radius: 20px;
+    height: 37px;
 }
 
 body {
@@ -55,6 +59,33 @@ h1 {
 ::placeholder {
     color: #32409F;
     font-family: "CodeNextItalic", Arial, Helvetica, sans-serif;
-    font-size: 70%;
+    font-size: 80%;
     padding-left: 1%;
+}
+
+
+h1#o{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+div#bord{
+    margin-top: -40px;
+    margin-bottom: 30px;
+    margin-left: 5%;
+    height: 1px;
+    width: 30%;
+    background-color: antiquewhite;
+    position: fixed;
+}
+
+div#bord1{
+    margin-top: -40px;
+    margin-bottom: 30px;
+    margin-left: 60%;
+    margin-right: 5%;
+    height: 1px;
+    width: 30%;
+    background-color: antiquewhite;
+    position: fixed;
 }
