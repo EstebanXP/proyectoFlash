@@ -31,9 +31,7 @@
 .btn-google {
     border-radius: 10px;
     margin: 7px;
-   
     max-width: 200px;
-    
 }
 
 .yellow-button {
@@ -63,13 +61,12 @@ h1 {
     padding-left: 1%;
 }
 
-
-h1#o{
+h1#o {
     padding-top: 20px;
     padding-bottom: 20px;
 }
 
-div#bord{
+div#bord {
     margin-top: -40px;
     margin-bottom: 30px;
     margin-left: 5%;
@@ -79,7 +76,7 @@ div#bord{
     position: fixed;
 }
 
-div#bord1{
+div#bord1 {
     margin-top: -40px;
     margin-bottom: 30px;
     margin-left: 60%;
@@ -88,4 +85,8 @@ div#bord1{
     width: 30%;
     background-color: antiquewhite;
     position: fixed;
+}
+
+#cuaduitoEventos {
+    background-color: rgb(255, 255, 255);
 }

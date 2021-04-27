@@ -3,12 +3,8 @@
     <h1>Bienvenido, {{name}} te esperabamos</h1>
     <router-link to="/about"></router-link> <br>
     <button class="logout" @click="Logout">Cerrar Sesión</button>
-    <!--Fer esta aplicacion te la dedico-->
-    <!--Fer esta aplicacion yo te la desdedico-->
   </div>
 </template>
-
-
 
 <script>
 // @ is an alias to /src
