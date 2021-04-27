@@ -11,8 +11,8 @@
 
             <!--Aqui empieza el formulario del login-->
             <form @submit.prevent="Login">
-                <input type="text" class="inp-email" placeholder="email" v-model="email"><br>
-                <input type="password" class="inp-contra" placeholder="contraseña" v-model="password"><br>
+                <input type="text" class="inp" placeholder="email" v-model="email"><br>
+                <input type="password" class="inp" placeholder="contraseña" v-model="password"><br>
                 <input type="submit" class="btn-inis" value="Iniciar Sesión">
             </form>
             <div class="logInGoogle">
