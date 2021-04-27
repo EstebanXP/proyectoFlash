@@ -87,6 +87,20 @@ div#bord1 {
     position: fixed;
 }
 
+<<<<<<< Updated upstream
 #cuaduitoEventos {
     background-color: rgb(255, 255, 255);
+=======
+div#reg-head{
+    height: 5%;
+    text-align: left;
+}
+
+.arrow-icon{
+    min-height: 120%;
+    margin-top: 3%;
+    margin-left: 2%;
+    
+    
+>>>>>>> Stashed changes
 }

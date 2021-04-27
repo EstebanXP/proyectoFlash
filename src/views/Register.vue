@@ -1,16 +1,26 @@
 <template>
 <div class="container-fluid gradient back"> 
+    <div id="reg-head">
+        <router-link to="/Login">
+            <img class="arrow-icon" src="../assets/ui-elements/Icon-Arrow@2x.png" alt="">
+        </router-link>
+        
+    </div>
     <div class="register">
         <!-- Esta es la parte de arriba del registro, donde dice registro-->
-        <h1>Registro</h1>
-
+        
+        <div class="pad-top">
+                <img src="../assets/logo.png" style="width:11%; min-width:140px"  >
+        </div>
+        <h1 class="pad-top">registrate</h1>
         <!--Aqui empieza el formulario del registro-->
         <form @submit.prevent="Register">
             <div class="container">
-                <input type="text" placeholder="Email" v-model="email"/><br><br>
-                <input type="password" placeholder="Password" v-model="password"/><br><br>
-                <input type="submit" value="Register">
-                <p>¿Ya tienes una cuenta?<router-link to="/Login"> Inicia sesion aquí</router-link></p>
+                <input class="inp" type="text" placeholder="email" v-model="email"/>
+                <input class="inp" type="password" placeholder="password" v-model="password"/>
+                <div style="padding-top:20px"></div>
+                <input class="btn yellow-button" type="submit" value="confirmar">
+                <h1 class="pad-top">¿Ya tienes una cuenta?<router-link to="/Login"> <br> Inicia sesion aquí</router-link></h1>
             </div>
         </form>
         <!--Aqui termina el formulario del registro-->
