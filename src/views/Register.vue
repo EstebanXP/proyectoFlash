@@ -1,4 +1,5 @@
 <template>
+<div class="container-fluid gradient back"> 
     <div class="register">
         <!-- Esta es la parte de arriba del registro, donde dice registro-->
         <h1>Registro</h1>
@@ -14,6 +15,8 @@
         </form>
         <!--Aqui termina el formulario del registro-->
     </div> 
+</div>
+    
 </template> 
 
 <script>
