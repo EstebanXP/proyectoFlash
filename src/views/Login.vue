@@ -11,18 +11,18 @@
 
             <!--Aqui empieza el formulario del login-->
             <form @submit.prevent="Login">
-                    <input type="text" class="inp-email" placeholder="email" v-model="email"><br>
-                    <input type="password" class="inp-contra" placeholder="contraseña" v-model="password"><br>
-                    <input type="submit" class="btn-inis" value="Iniciar Sesión">
-                    <div class="logInGoogle">
-                    <button @click="LoginG" class="btn-google">Inicia sesion aquí con tu cuenta Google</button>
-                </div>
-                <h1>O</h1> 
-                <div class="btn yellow-button">
-                    <router-link to="/register"><h1>crea una <br> cuenta nueva</h1></router-link>
-                </div>
-                
+                <input type="text" class="inp-email" placeholder="email" v-model="email"><br>
+                <input type="password" class="inp-contra" placeholder="contraseña" v-model="password"><br>
+                <input type="submit" class="btn-inis" value="Iniciar Sesión">
             </form>
+            <div class="logInGoogle">
+                <button @click="LoginG" class="btn-google">Inicia sesion aquí con tu cuenta Google</button>
+            </div>
+            <h1>O</h1>  
+            <div class="btn yellow-button">
+                <router-link to="/register"><h1>crea una <br> cuenta nueva</h1></router-link>
+            </div>
+                
             <!--Aqui termina el formulario del login-->
         </div>
         <!--Aqui empieza el boton de login con gmail-->
