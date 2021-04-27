@@ -21,9 +21,7 @@
                 <img class="btn-google" src="../assets/google.png" @click="LoginG" style="width:40%">
             </div>
             
-            <h1 id="o">o puedes </h1>  
-            <div id=bord></div>
-            <div id=bord1></div>
+            <h1 id="o">o puedes </h1> 
             <div class="btn yellow-button">
                 <router-link to="/register">crear una cuenta nueva</router-link>
             </div>

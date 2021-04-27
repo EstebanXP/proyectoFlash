@@ -4,7 +4,6 @@
         <router-link to="/Login">
             <img class="arrow-icon" src="../assets/ui-elements/Icon-Arrow@2x.png" alt="">
         </router-link>
-        
     </div>
     <div class="register">
         <!-- Esta es la parte de arriba del registro, donde dice registro-->

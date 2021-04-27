@@ -69,26 +69,6 @@ h1#o {
     padding-bottom: 20px;
 }
 
-div#bord {
-    margin-top: -40px;
-    margin-bottom: 30px;
-    margin-left: 5%;
-    height: 1px;
-    width: 30%;
-    background-color: antiquewhite;
-    position: fixed;
-}
-
-div#bord1 {
-    margin-top: -40px;
-    margin-bottom: 30px;
-    margin-left: 80%;
-    margin-right: 5%;
-    height: 1px;
-    width: 30%;
-    background-color: antiquewhite;
-    position: fixed;
-}
 
 #backEvents {
     margin-top: 5%;
