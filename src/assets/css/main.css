@@ -87,16 +87,30 @@ div#bord1 {
     position: fixed;
 }
 
-#cuaduitoEventos {
-    background-color: rgb(255, 255, 255);
+.pad-top-events {
+    padding-top: 20px;
+    background-color: rgb(165, 45, 45);
 }
 
-div#reg-head{
+#backEvents {
+    margin-top: 5%;
+    background-color: #EEE;
+    height: 400px;
+    width: 50%;
+    border-radius: 15px;
+}
+
+#h1Events {
+    font-family: "CodeNextItalic", Arial, Helvetica, sans-serif;
+    color: #FF3366;
+}
+
+div#reg-head {
     height: 5%;
     text-align: left;
 }
 
-.arrow-icon{
+.arrow-icon {
     min-height: 120%;
     margin-top: 3%;
     margin-left: 2%;
