@@ -5,13 +5,14 @@
     margin-left: -10%;
 }
 
-.back {
+div.back {
     height: 100%;
     position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
+    overflow-y: auto;
 }
 
 .pad-top {
@@ -113,7 +114,7 @@ div#reg-head {
 }
 
 .arrow-icon {
-    min-height: 120%;
+    min-height: 80%;
     margin-top: 3%;
     margin-left: 2%;
 }
