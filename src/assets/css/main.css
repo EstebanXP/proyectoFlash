@@ -1,6 +1,8 @@
 .gradient {
     background: rgb(33, 43, 104);
     background: linear-gradient(180deg, rgba(33, 43, 104, 1) 0%, rgba(40, 50, 119, 1) 35%, rgba(50, 64, 159, 1) 100%);
+    width: 120%;
+    margin-left: -10%;
 }
 
 .back {
@@ -87,17 +89,55 @@ div#bord1 {
     position: fixed;
 }
 
-#cuaduitoEventos {
-    background-color: rgb(255, 255, 255);
+.pad-top-events {
+    padding-top: 20px;
+    background-color:#FF3366;
 }
 
-div#reg-head{
+#backEvents {
+    margin-top: 5%;
+    background-color: #EEE;
+    height: 400px;
+    max-width: 80%;
+    border-radius: 15px;
+    border: #939393;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#h1Events {
+    font-family: "CodeNextItalic", Arial, Helvetica, sans-serif;
+    color: #FF3366;
+}
+
+div#reg-head {
     height: 5%;
     text-align: left;
 }
 
-.arrow-icon{
+.arrow-icon {
     min-height: 120%;
     margin-top: 3%;
     margin-left: 2%;
+}
+
+.botones{
+    display: inline-flex;
+}
+
+.dot{
+    height: 25px;
+    width: 25px;
+    background-color:#FF3366;;
+    border-radius: 50%;
+    border: 3px solid #FF3366;
+    display: inline-block;
+}
+
+.dot-fill{
+    height: 25px;
+    width: 25px;
+    border: 3px solid #FF3366;
+    border-radius: 50%;
+    display: inline-block;
 }
