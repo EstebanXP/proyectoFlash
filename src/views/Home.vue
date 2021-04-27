@@ -1,26 +1,48 @@
 <template>
+  <fragment>
   <div class="home">
     <h1>Bienvenido, {{name}} te esperabamos</h1>
     <router-link to="/about"></router-link> <br>
-    <button class="logout" @click="Logout">Cerrar Sesión</button>
+    
   </div>
+<form @submit.prevent="mandarHoraFecha">
+  <div class="container">
+    <input type="date" v-model="fecha"/><br><br>
+    <input type="time" v-model="hora"/><br><br>
+    <input type="input" v-model="recordatorio"/><br><br>
+    <input type="submit" value="Guardar recordatorio">
+  </div>
+</form>
+  <div class="logout">
+      <button class="logout" @click="Logout">Cerrar Sesión</button>
+  </div>
+</fragment>
+
 </template>
 
 <script>
 // @ is an alias to /src
 import {ref,onBeforeMount} from 'vue';
 import firebase from 'firebase';
+//const db=firebase.firestore();
 
 export default {
   setup() {
 
     const name = ref("");
+    const hora=ref("");
+    const fecha=ref("");
+    const recordatorio=ref("");
     onBeforeMount(()=>{
       const user = firebase.auth().currentUser;
       if(user){
         name.value=user.email.split('@')[0];
       }
     });
+
+     const mandarHoraFecha=()=>{
+            console.log(hora.value+"+"+fecha.value+"+"+recordatorio.value);
+      }
 
     const Logout = () =>{
       firebase
@@ -32,8 +54,13 @@ export default {
 
     return{
       name,
-      Logout
+      Logout,
+      mandarHoraFecha,
+      hora,
+      fecha,
+      recordatorio
     }
   }
 }
+
 </script>

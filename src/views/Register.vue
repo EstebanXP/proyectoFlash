@@ -32,20 +32,29 @@
 <script>
 import firebase from 'firebase';
 import {ref} from 'vue';
+const db=firebase.firestore();
+
 export default {
     setup() {
         const email=ref("");
         const password=ref("");
+        
+
         //Esta es la funcion para registrar usuarios
         const Register = () =>{
             firebase
                 .auth()
                 .createUserWithEmailAndPassword(email.value, password.value)
-                .then(user=>{
-                    alert(user);
+                .then(cred=>{
+                    return db.collection('usuarios').doc(cred.user.uid).set({
+                        emailU : email.value
+                    });
                 })
-                .catch(err=>alert(err.message));
+                .catch(err=>err.message);
         }
+
+       
+
         //Estas variables son las que hacen que se puedan llamar externamente las funciones
         return{
             Register,
