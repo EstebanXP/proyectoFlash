@@ -16,8 +16,24 @@
     padding-top: 40px;
 }
 
-.btns-login {
-    border-radius: 50%;
+.inp-email {
+    border-radius: 10px;
+    margin: 7px;
+}
+
+.inp-contra {
+    border-radius: 10px;
+    margin: 7px;
+}
+
+.btn-inis {
+    border-radius: 10px;
+    margin: 7px;
+}
+
+.btn-google {
+    border-radius: 10px;
+    margin: 7px;
 }
 
 .yellow-button {

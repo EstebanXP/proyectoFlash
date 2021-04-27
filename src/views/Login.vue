@@ -11,14 +11,11 @@
 
             <!--Aqui empieza el formulario del login-->
             <form @submit.prevent="Login">
-                <div class="btns-login">
-                    <input type="text" placeholder="email" v-model="email"><br>
-                    <input type="password" placeholder="contraseña" v-model="password"><br>
-                    <input type="submit" value="Iniciar Sesión">
+                    <input type="text" class="inp-email" placeholder="email" v-model="email"><br>
+                    <input type="password" class="inp-contra" placeholder="contraseña" v-model="password"><br>
+                    <input type="submit" class="btn-inis" value="Iniciar Sesión">
                     <div class="logInGoogle">
-                    <button @click="LoginG">Inicia sesion aquí con tu cuenta Google</button>
-                </div>
-                
+                    <button @click="LoginG" class="btn-google">Inicia sesion aquí con tu cuenta Google</button>
                 </div>
                 <h1>O</h1> 
                 <div class="btn yellow-button">
