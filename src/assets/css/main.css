@@ -1,35 +1,37 @@
-.gradient
-{
-    background: rgb(33,43,104);
-    background: linear-gradient(180deg, rgba(33,43,104,1) 0%, rgba(40,50,119,1) 35%, rgba(50,64,159,1) 100%);
+.gradient {
+    background: rgb(33, 43, 104);
+    background: linear-gradient(180deg, rgba(33, 43, 104, 1) 0%, rgba(40, 50, 119, 1) 35%, rgba(50, 64, 159, 1) 100%);
 }
 
-.back{
-    height:100%;
+.back {
+    height: 100%;
     position: fixed;
-    top:0;
+    top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    
 }
 
-.pad-top{
+.pad-top {
     padding-top: 40px;
 }
 
-.yellow-button{
+.btns-login {
+    border-radius: 50%;
+}
+
+.yellow-button {
     background-color: #EBC409;
     width: 60%;
     color: #32409F;
 }
 
-body{
+body {
     background-color: rgba(62, 100, 83, 0.37);
     color: #EEE;
 }
 
-h1{
+h1 {
     font-family: "CodeNextItalic", Arial, Helvetica, sans-serif;
     font-size: 120%;
 }
@@ -39,4 +41,4 @@ h1{
     font-family: "CodeNextItalic", Arial, Helvetica, sans-serif;
     font-size: 70%;
     padding-left: 1%;
-  }
+}

@@ -7,20 +7,21 @@
             </div>
             
             <!-- Esta es la parte de arriba del login, donde dice Login -->
-            <h1 class="pad-top">INICIA SESIÓN</h1>
-            <!-- Creo que por aqui debe estar la imagen del logo-->
-            <!-- Creo que por aqui debe finalizar la imagen del logo-->
+            <h1 class="pad-top">REGISTRATE</h1>
 
             <!--Aqui empieza el formulario del login-->
             <form @submit.prevent="Login">
-                <input type="text" placeholder="email" v-model="email"><br>
-                <input type="password" placeholder="contraseña" v-model="password"><br>
-                <input type="submit" value="Iniciar Sesión">
-                <div class="logInGoogle">
+                <div class="btns-login">
+                    <input type="text" placeholder="email" v-model="email"><br>
+                    <input type="password" placeholder="contraseña" v-model="password"><br>
+                    <input type="submit" value="Iniciar Sesión">
+                    <div class="logInGoogle">
                     <button @click="LoginG">Inicia sesion aquí con tu cuenta Google</button>
                 </div>
+                
+                </div>
                 <h1>O</h1> 
-                <div class=" btn yellow-button">
+                <div class="btn yellow-button">
                     <router-link to="/register"><h1>crea una <br> cuenta nueva</h1></router-link>
                 </div>
                 
