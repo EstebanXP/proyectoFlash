@@ -81,17 +81,12 @@ div#bord {
 div#bord1 {
     margin-top: -40px;
     margin-bottom: 30px;
-    margin-left: 60%;
+    margin-left: 80%;
     margin-right: 5%;
     height: 1px;
     width: 30%;
     background-color: antiquewhite;
     position: fixed;
-}
-
-.pad-top-events {
-    padding-top: 20px;
-    background-color:#FF3366;
 }
 
 #backEvents {
@@ -106,6 +101,8 @@ div#bord1 {
 }
 
 #h1Events {
+    padding-top: 10%;
+    font-size: 150%;
     font-family: "CodeNextItalic", Arial, Helvetica, sans-serif;
     color: #FF3366;
 }
@@ -121,20 +118,24 @@ div#reg-head {
     margin-left: 2%;
 }
 
-.botones{
+.botones {
     display: inline-flex;
 }
 
-.dot{
+#sem {
+    text-align: center;
+}
+
+.dot {
     height: 25px;
     width: 25px;
-    background-color:#FF3366;;
+    background-color: #FF3366;
     border-radius: 50%;
     border: 3px solid #FF3366;
     display: inline-block;
 }
 
-.dot-fill{
+.dot-fill {
     height: 25px;
     width: 25px;
     border: 3px solid #FF3366;
