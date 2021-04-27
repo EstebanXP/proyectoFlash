@@ -2,7 +2,7 @@
     <div class="container-fluid gradient back">
         <div class="login">
              <h1 class="pad-top title">bienvenido de<br>nuevo, estudiante</h1>
-            <div class="pad-top">
+        <div class="pad-top">
                 <img src="../assets/logo.png" style="width:11%; min-width:140px"  >
             </div>
             
@@ -34,8 +34,8 @@
         
         <!--Aqui termina el boton de login con gmail-->
         </div>
-    <div>
-</div>
+        <div>
+    </div>
 </template>
 
 <script>
