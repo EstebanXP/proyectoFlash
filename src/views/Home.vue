@@ -1,6 +1,11 @@
 <template>
   <fragment>
-  <div class="home">
+  <div class="home ">
+    <div id="nav-head gradient back">
+        <button class="arrow" @click="Logout">
+            <img class="arrow-icon" src="../assets/ui-elements/Icon-Arrow@2x.png" alt="">
+        </button>
+    </div>
     <h1>Bienvenido, {{name}} te esperabamos</h1>
     <router-link to="/about"></router-link> <br>
     
