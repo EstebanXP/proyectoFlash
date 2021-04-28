@@ -15,6 +15,7 @@
         </div>
       </div>
     </div>
+    <!--puto el kevin, que se tatue el amlo-->
     <h1>Bienvenido, {{name}} te esperabamos</h1>
     <router-link to="/about"></router-link> <br>
 <form @submit.prevent="mandarHoraFecha">
