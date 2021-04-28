@@ -17,7 +17,7 @@
     </div>
     <h1>Bienvenido, {{name}} te esperabamos</h1>
     <router-link to="/about"></router-link> <br>
-<form @submit.prevent="mandarHoraFecha">
+<form @submit.prevent="agregarRecordatorio">
   <div class="container">
     <input type="date" v-model="fecha"/><br><br>
     <input type="time" v-model="hora"/><br><br>
@@ -36,7 +36,7 @@
 // @ is an alias to /src
 import {ref,onBeforeMount} from 'vue';
 import firebase from 'firebase';
-//const db=firebase.firestore();
+const db=firebase.firestore();
 
 export default {
   setup() {
@@ -52,9 +52,17 @@ export default {
       }
     });
 
-     const mandarHoraFecha=()=>{
-            console.log(hora.value+"+"+fecha.value+"+"+recordatorio.value);
-      }
+     const agregarRecordatorio= async ()=>{
+        const user1 = firebase.auth().currentUser.uid;
+        //Obtiene el id del documento
+        db.collection('usuarios').doc(user1).collection('recordatorios').doc().set({
+          recordatorio:recordatorio.value,
+          color:1,
+          status:false,
+          //buscar como añadir la hora y fecha en el formato timestamp de firebase
+        });
+
+    }
 
     const Logout = () =>{
       firebase
@@ -67,7 +75,7 @@ export default {
     return{
       name,
       Logout,
-      mandarHoraFecha,
+      agregarRecordatorio,
       hora,
       fecha,
       recordatorio
