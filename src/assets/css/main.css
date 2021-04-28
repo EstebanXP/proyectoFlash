@@ -69,11 +69,9 @@ h1#o {
     padding-bottom: 20px;
 }
 
-
 #backEvents {
     margin-top: 5%;
-    background-color: #EEE;
-    height: 400px;
+    /*background-color: #EEE;*/
     max-width: 80%;
     border-radius: 15px;
     border: #939393;
@@ -125,16 +123,12 @@ div#reg-head {
     display: inline-block;
 }
 
-.nav-head{
-    
-    
-}
+.nav-head {}
 
-button.arrow{
+button.arrow {
     background-color: rgba(255, 255, 255, 0);
-    border:  rgba(255, 255, 255, 0);
+    border: rgba(255, 255, 255, 0);
     float: left;
     margin-left: 10%;
     max-width: 2%;
 }
-
