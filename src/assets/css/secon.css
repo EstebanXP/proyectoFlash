@@ -2,7 +2,7 @@
     margin-top: 5%;
     height: 200px;
     background-color: #ECECEC;
-    border: 2px solid #FF3366;
+    border: 2px solid rgba(147, 147, 147, 0.5);
     max-width: 80%;
     border-radius: 15px;
     margin-left: 10%;
@@ -27,7 +27,7 @@
     width: 25px;
     background-color: #FF3366;
     border-radius: 50%;
-    border: 3px solid #33ff55;
+    border: 3px solid #FF3366;
     display: inline-block;
 }
 
