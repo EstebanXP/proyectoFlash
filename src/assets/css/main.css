@@ -84,10 +84,9 @@ div#reg-head {
 
 /*.nav-head {}*/
 
-button.arrow {
-    background-color: rgba(255, 255, 255, 0);
-    border: rgba(255, 255, 255, 0);
-    float: left;
-    margin-left: 10%;
-    max-width: 2%;
+
+.arrow{
+    height: 10%;
+    min-height: 40px;
+    max-height: 50%;
 }

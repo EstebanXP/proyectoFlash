@@ -3,10 +3,8 @@
     <div class="nav-head gradient">
       <div class="container" style="padding-top:1%">
         <div class="row">
-          <div class="col">
-            <button class="arrow" @click="Logout">
-              <img class="arrow-icon" src="../assets/ui-elements/Icon-Arrow@2x.png" alt="">
-            </button>
+          <div class="left-nav-arrow ">
+            <img class="arrow" @click="Logout" src="../assets/ui-elements/Icon-Arrow@2x.png" alt="">
           </div>
           <div class="col">
             <img src="../assets/logo.png" style="width:20%; min-width:20px">
