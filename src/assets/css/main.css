@@ -126,13 +126,15 @@ div#reg-head {
 }
 
 .nav-head{
-    background: rgb(33, 43, 104);
-    background: linear-gradient(180deg, rgba(33, 43, 104, 1) 0%, rgba(40, 50, 119, 1) 35%, rgba(50, 64, 159, 1) 100%);
-    width: 120%;
-    margin-left: -10%
+    
+    
 }
 
-.arrow{
+button.arrow{
     background-color: rgba(255, 255, 255, 0);
     border:  rgba(255, 255, 255, 0);
+    float: left;
+    margin-left: 10%;
+    max-width: 2%;
 }
+

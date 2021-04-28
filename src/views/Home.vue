@@ -1,15 +1,24 @@
 <template>
   <fragment>
-  <div class="home ">
-    <div id="nav-head gradient back">
-        <button class="arrow" @click="Logout">
-            <img class="arrow-icon" src="../assets/ui-elements/Icon-Arrow@2x.png" alt="">
-        </button>
+    <div class="nav-head gradient">
+      <div class="container" style="padding-top:1%">
+        <div class="row">
+          <div class="col">
+            <button class="arrow" @click="Logout">
+              <img class="arrow-icon" src="../assets/ui-elements/Icon-Arrow@2x.png" alt="">
+            </button>
+          </div>
+          <div class="col">
+            <img src="../assets/logo.png" style="width:20%; min-width:20px">
+          </div>
+          <div class="col">
+            3 of 3
+          </div>
+        </div>
+      </div>
     </div>
     <h1>Bienvenido, {{name}} te esperabamos</h1>
     <router-link to="/about"></router-link> <br>
-    
-  </div>
 <form @submit.prevent="mandarHoraFecha">
   <div class="container">
     <input type="date" v-model="fecha"/><br><br>
