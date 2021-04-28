@@ -48,8 +48,13 @@ div.back {
 }
 
 body {
+<<<<<<< Updated upstream
     background-color: #EEE;
     color: #FFF;
+=======
+    background-color: rgba(129, 129, 129, 0.37);
+    color: #EEE;
+>>>>>>> Stashed changes
 }
 
 h1 {
@@ -69,6 +74,26 @@ h1#o {
     padding-bottom: 20px;
 }
 
+<<<<<<< Updated upstream
+=======
+#backEvents {
+    margin-top: 5%;
+    /*background-color: #EEE;*/
+    max-width: 80%;
+    border-radius: 15px;
+    border: #939393;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#h1Events {
+    padding-top: 10%;
+    font-size: 150%;
+    font-family: "CodeNextItalic", Arial, Helvetica, sans-serif;
+    color: #FF3366;
+}
+
+>>>>>>> Stashed changes
 div#reg-head {
     height: 5%;
     text-align: left;
@@ -85,8 +110,27 @@ div#reg-head {
 /*.nav-head {}*/
 
 
+<<<<<<< Updated upstream
 .arrow{
     height: 10%;
     min-height: 40px;
     max-height: 50%;
+=======
+.dot-fill {
+    height: 25px;
+    width: 25px;
+    border: 3px solid #FF3366;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.nav-head {}
+
+button.arrow {
+    background-color: rgba(255, 255, 255, 0);
+    border: rgba(255, 255, 255, 0);
+    float: left;
+    margin-left: 10%;
+    max-width: 2%;
+>>>>>>> Stashed changes
 }

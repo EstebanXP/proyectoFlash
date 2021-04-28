@@ -3,8 +3,15 @@
     <div class="nav-head gradient">
       <div class="container" style="padding-top:1%">
         <div class="row">
+<<<<<<< Updated upstream
           <div class="left-nav-arrow ">
             <img class="arrow" @click="Logout" src="../assets/ui-elements/Icon-Arrow@2x.png" alt="">
+=======
+          <div class="col">
+            <button class="arrow" @click="Logout">
+              <img class="arrow-icon" src="../assets/ui-elements/Icon-Arrow@2x.png" alt="">
+            </button>
+>>>>>>> Stashed changes
           </div>
           <div class="col">
             <img src="../assets/logo.png" style="width:20%; min-width:20px">
@@ -17,12 +24,18 @@
     </div>
     <h1>Bienvenido, {{name}} te esperabamos</h1>
     <router-link to="/about"></router-link> <br>
-
+<<<<<<< Updated upstream
 =======
     
+<<<<<<< HEAD
 
   
 <form @submit.prevent="agregarRecordatorio">
+=======
+  </div>
+>>>>>>> Stashed changes
+<form @submit.prevent="mandarHoraFecha">
+>>>>>>> parent of 7538642 (Ya jala guardar en firestore los recordatorios, solo falta el timestamp)
   <div class="container">
     <input type="date" v-model="fecha"/><br><br>
     <input type="time" v-model="hora"/><br><br>
@@ -41,7 +54,7 @@
 // @ is an alias to /src
 import {ref,onBeforeMount} from 'vue';
 import firebase from 'firebase';
-const db=firebase.firestore();
+//const db=firebase.firestore();
 
 export default {
   setup() {
@@ -57,17 +70,9 @@ export default {
       }
     });
 
-     const agregarRecordatorio= async ()=>{
-        const user1 = firebase.auth().currentUser.uid;
-        //Obtiene el id del documento
-        await db.collection('usuarios').doc(user1).collection('recordatorios').doc().set({
-          recordatorio:recordatorio.value,
-          color:1,
-          status:false,
-          //buscar como añadir la hora y fecha en el formato timestamp de firebase
-        });
-
-    }
+     const mandarHoraFecha=()=>{
+            console.log(hora.value+"+"+fecha.value+"+"+recordatorio.value);
+      }
 
     const Logout = () =>{
       firebase
@@ -80,7 +85,7 @@ export default {
     return{
       name,
       Logout,
-      agregarRecordatorio,
+      mandarHoraFecha,
       hora,
       fecha,
       recordatorio
