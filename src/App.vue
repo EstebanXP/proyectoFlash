@@ -7,6 +7,7 @@
 import {onBeforeMount} from 'vue';
 import { useRouter,useRoute} from 'vue-router';
 import firebase from 'firebase';
+import "./assets/css/secon.css";
 
 export default {
   setup(){
@@ -37,8 +38,6 @@ export default {
   src: local("CodeNextItalic"),
   url(./fonts/CodeNext-SemiBoldItalic.ttf) format("truetype");
 }
-
-
 
 
 #app{
