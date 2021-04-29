@@ -15,7 +15,14 @@
             </div>
           </div>
       </div>
-                    <!--Aqui atascar las horas-->
+
+    <div class="container">  
+      <div class="row">
+          <div class="col" id="coli"><input type="time" v-model="hora"/><br><br></div>
+          <div class="col" id="coli"><input type="time" v-model="hora"/><br><br></div>
+      </div>
+    
+    </div>
       <form @submit.prevent="conf" class="form-in">
         <div class="container" style="color: #ff3366">
           <p class="font-normal" id="colonotis">Notificaciones rojas</p>
