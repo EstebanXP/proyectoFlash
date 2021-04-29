@@ -4,7 +4,9 @@
       <div class="container nav">
         <div class="row align-items-center">
           <div class="col">
-            <img class="arrow" @click="Logout" src="../assets/ui-elements/Icon-Arrow@2x.png" alt="">
+            <router-link to="/">
+              <img class="arrow"  src="../assets/ui-elements/Icon-Arrow@2x.png" alt="">
+            </router-link>
           </div>
           <div class="col-6">
             <img class="logo" src="../assets/logo.png">
