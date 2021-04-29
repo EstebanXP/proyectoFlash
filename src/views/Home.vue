@@ -37,7 +37,7 @@
 // @ is an alias to /src
 import {ref,onBeforeMount} from 'vue';
 import firebase from 'firebase';
-
+//import moment from 'moment'
 
 export default {
   setup() {
@@ -54,10 +54,18 @@ export default {
     });
 
     const agregarRecordatorio=  ()=>{
+      /* Moment es la función que vamos a utilizar para calcular los días que faltan para terminar un pendiente
+        var fecha1 = moment('2016-07-12');
+        var fecha2 = moment('2016-08-01');
+
+      console.log(fecha2.diff(fecha1, 'days'), ' dias de diferencia');
+      */
         const user1 = firebase.auth().currentUser.uid;
         //Obtiene el id del documento
        firebase.firestore().collection('usuarios').doc(user1).collection('recordatorios').doc().set({
           recordatorio:recordatorio.value,
+          fecha:fecha.value,
+          hora:hora.value,
           color:1,
           status:false,
           //buscar como añadir la hora y fecha en el formato timestamp de firebase
