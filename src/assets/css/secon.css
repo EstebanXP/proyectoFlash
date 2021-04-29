@@ -42,3 +42,20 @@
 .font-normal {
     font-family: "CodeNext", Arial, Helvetica, sans-serif;
 }
+
+#colonotis {
+    color: #32409F;
+    font-size: 80%;
+}
+
+#colonum {
+    color: #FF3366;
+    text-align: left;
+    padding-top: 4px;
+}
+
+#coloras {
+    color: #32409F;
+    text-align: left;
+    padding-top: 4px;
+}

@@ -30,6 +30,13 @@ const routes = [{
         name: 'config-notis',
         component: () =>
             import ('../views/Config-notis.vue')
+    },
+
+    {
+        path: '/Time-notis',
+        name: 'time-notis',
+        component: () =>
+            import ('../views/Time-notis.vue')
     }
 
 ]
