@@ -1,6 +1,6 @@
 #backEvents {
     margin-top: 5%;
-    height: 200px;
+    
     background-color: #ECECEC;
     border: 2px solid rgba(147, 147, 147, 0.5);
     max-width: 80%;
@@ -38,4 +38,8 @@
     background-color: #ECECEC;
     border-radius: 50%;
     display: inline-block;
+}
+
+.font-normal {
+    font-family: "CodeNext", Arial, Helvetica, sans-serif;
 }
