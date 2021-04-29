@@ -1,6 +1,5 @@
 #backEvents {
     margin-top: 5%;
-    
     background-color: #ECECEC;
     border: 2px solid rgba(147, 147, 147, 0.5);
     max-width: 80%;
@@ -16,7 +15,7 @@
     color: #FF3366;
 }
 
-.col {
+#coli {
     color: #32409F;
     text-align: left;
     padding-top: 4px;
