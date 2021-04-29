@@ -4,13 +4,13 @@
       <div class="container nav">
         <div class="row align-items-center">
           <div class="col">
-            <img class="arrow" @click="Logout" src="../assets/ui-elements/Icon-Arrow@2x.png" alt="">
+            <img class="bell"  src="../assets/ui-elements/Icon-Bell@2x.png" alt="">
           </div>
           <div class="col-6">
             <img class="logo" src="../assets/logo.png">
           </div>
           <div class="col">
-            
+            <img class="add"  src="../assets/ui-elements/Icon-Add@2x.png" alt="">
           </div>
         </div>
       </div>
@@ -27,8 +27,11 @@
   </div>
 </form>
   <div class="logout">
+      <img class="arrow" @click="Logout" src="../assets/ui-elements/Icon-Arrow@2x.png" alt="">
       <button class="logout" @click="Logout">Cerrar Sesión</button>
   </div>
+  
+  
 </fragment>
 
 </template>

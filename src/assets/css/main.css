@@ -89,7 +89,7 @@ div#reg-head {
     max-width: 70px;
     max-height: 100px;
     float: left;
-    padding-left: 10%;
+    padding-left: 15%;
     
 }
 
@@ -106,4 +106,22 @@ div.nav{
     display: block;
     padding-top: 1%;
     padding-bottom: 1%;
+}
+
+.bell{
+    width: 40%;
+    max-width: 70px;
+    max-height: 100px;
+    float: left;
+    padding-left: 15%;
+    
+}
+
+.add{
+    width: 38%;
+    max-width: 70px;
+    max-height: 100px;
+    float: right;
+    padding-right: 15%;
+    
 }
