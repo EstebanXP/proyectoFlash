@@ -4,7 +4,9 @@
       <div class="container nav">
         <div class="row align-items-center">
           <div class="col">
-            <img class="bell"  src="../assets/ui-elements/Icon-Bell@2x.png" alt="">
+            <router-link to="/Time-notis">
+              <img class="bell"  src="../assets/ui-elements/Icon-Bell@2x.png" alt="">
+            </router-link>
           </div>
           <div class="col-6">
             <img class="logo" src="../assets/logo.png">
@@ -18,17 +20,43 @@
     <!--aqui acaba la barra de navegacion-->
     <h1>Bienvenido, {{name}} te esperabamos</h1>
     <router-link to="/about"></router-link> <br>
-<form @submit.prevent="agregarRecordatorio">
-  <div class="container">
-    <input type="date" v-model="fecha"/><br><br>
-    <input type="time" v-model="hora"/><br><br>
-    <input type="input" v-model="recordatorio"/><br><br>
-    <input type="submit" value="Guardar recordatorio">
-  </div>
-</form>
+  <form @submit.prevent="agregarRecordatorio">
+    <div class="container">
+      <input type="date" v-model="fecha"/><br><br>
+      <input type="time" v-model="hora"/><br><br>
+      <input type="input" v-model="recordatorio"/><br><br>
+      <input type="submit" value="Guardar recordatorio">
+    </div>
+  </form>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col">
+          
+        </div>
+        <div class="col-6">
+          <router-link to="/Config-notis">
+            <img class="bell"  src="../assets/ui-elements/Icon-Settings@2x.png" alt="">
+          </router-link>
+          <p style="color:black, margin-left:-20px">próximos</p>
+          <img class="bell"  src="../assets/ui-elements/arrow-down@2x.png" alt="">
+        </div>
+        <div class="col">
+          
+        </div>
+      </div>
+    </div>
+    <!--Aqui van los componentes de recordatorios-->
+    <h1>recordarroiso</h1>
+    <div>
+
+    </div>
+  
   <div class="logout">
-      <img class="arrow" @click="Logout" src="../assets/ui-elements/Icon-Arrow@2x.png" alt="">
-      <button class="logout" @click="Logout">Cerrar Sesión</button>
+      
+      <button class="logout" @click="Logout"> 
+        <img class="arrow" src="../assets/ui-elements/Icon-Arrow@2x.png" alt="">
+        Cerrar Sesión
+      </button>
   </div>
   
   
