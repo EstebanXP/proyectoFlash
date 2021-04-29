@@ -1,16 +1,16 @@
 <template>
   <fragment>
-    <div class="nav-head gradient">
-      <div class="container" style="padding-top:1%">
-        <div class="row">
-          <div class="left-nav-arrow ">
+    <div class="gradient">
+      <div class="container nav">
+        <div class="row align-items-center">
+          <div class="col">
             <img class="arrow" @click="Logout" src="../assets/ui-elements/Icon-Arrow@2x.png" alt="">
           </div>
-          <div class="col">
-            <img src="../assets/logo.png" style="width:20%; min-width:20px">
+          <div class="col-6">
+            <img class="logo" src="../assets/logo.png">
           </div>
           <div class="col">
-            3 of 3
+            
           </div>
         </div>
       </div>
