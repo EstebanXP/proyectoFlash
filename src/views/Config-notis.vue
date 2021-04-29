@@ -1,9 +1,22 @@
 <template>
-  <div class="container-fluid">
-    <!--Esta es la parte de arriba del cuaduito, donde va el logo y la flecha-->
-    <div class="pad-top-events gradient">
-      <img src="../assets/logo.png" style="width: 2%; min-width: 80px" />
+<!--Esta es la parte de arriba del cuaduito, donde va el logo y la flecha-->
+    <div class="gradient">
+      <div class="container nav">
+        <div class="row align-items-center">
+          <div class="col">
+            <img class="arrow" @click="Logout" src="../assets/ui-elements/Icon-Arrow@2x.png" alt="">
+          </div>
+          <div class="col-6">
+            <img class="logo" src="../assets/logo.png">
+          </div>
+          <div class="col">
+            
+          </div>
+        </div>
+      </div>
     </div>
+    <!--aqui acaba la barra de navegacion-->
+  <div class="container-fluid">
     <div id="backEvents">
       <h1 id="h1Events">mostrar proximos eventos</h1>
       <form @submit.prevent="conf" class="form-in">
