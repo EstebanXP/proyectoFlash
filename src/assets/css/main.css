@@ -1,8 +1,9 @@
 .gradient {
     background: rgb(33, 43, 104);
     background: linear-gradient(180deg, rgba(33, 43, 104, 1) 0%, rgba(40, 50, 119, 1) 35%, rgba(50, 64, 159, 1) 100%);
-    width: 120%;
-    margin-left: -10%;
+    width: 100%;
+    
+    
 }
 
 div.back {
@@ -50,6 +51,7 @@ div.back {
 body {
     background-color: #EEE;
     color: #FFF;
+    overflow: hidden;
 }
 
 h1 {
