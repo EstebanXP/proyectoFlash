@@ -124,3 +124,30 @@ div.nav{
     padding-right: 15%;
     
 }
+
+.conf{
+    height: 17%;
+    max-height: 230px;
+    display: block;
+}
+
+.settings{
+float: right;
+}
+
+.arr-down{
+    float: left;
+
+}
+
+#backEventsHome{
+    margin-top: 5%;
+    background-color: #ECECEC;
+    border: 2px solid rgba(147, 147, 147, 0.5);
+    max-width: 80%;
+    border-radius: 15px;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}

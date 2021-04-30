@@ -20,29 +20,34 @@
     <!--aqui acaba la barra de navegacion-->
     <h1>Bienvenido, {{name}} te esperabamos</h1>
     <router-link to="/about"></router-link> <br>
-  <form @submit.prevent="agregarRecordatorio">
-    <div class="container">
-      <input type="date" v-model="fecha"/><br><br>
-      <input type="time" v-model="hora"/><br><br>
-      <input type="input" v-model="recordatorio"/><br><br>
-      <input type="submit" value="Guardar recordatorio">
+    <div id="backEventsHome">
+      <form @submit.prevent="agregarRecordatorio">
+        <div class="container">
+          <input type="date" v-model="fecha"/><br><br>
+          <input type="time" v-model="hora"/><br><br>
+          <input type="input" v-model="recordatorio"/><br><br>
+          <input type="submit" value="Guardar recordatorio">
+        </div>
+      </form>
     </div>
-  </form>
-    <div class="container">
+  
+    <!-- Aqui es la mitad de la página-->
+    <div class="container conf">
       <div class="row align-items-center">
         <div class="col">
-          
-        </div>
-        <div class="col-6">
           <router-link to="/Config-notis">
-            <img class="bell"  src="../assets/ui-elements/Icon-Settings@2x.png" alt="">
+            <img class="settings"  src="../assets/ui-elements/Icon-Settings@2x.png" alt="">
           </router-link>
-          <p style="color:black, margin-left:-20px">próximos</p>
-          <img class="bell"  src="../assets/ui-elements/arrow-down@2x.png" alt="">
         </div>
         <div class="col">
           
+          <p style="color:black">próximos</p>
+          
         </div>
+        <div class="col">
+          <img class="arr-down"  src="../assets/ui-elements/arrow-down@2x.png" alt="">
+        </div>
+        
       </div>
     </div>
     <!--Aqui van los componentes de recordatorios-->

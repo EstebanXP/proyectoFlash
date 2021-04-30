@@ -23,10 +23,9 @@
       <h1 id="h1Events">mostrar proximos eventos</h1>
       <form @submit.prevent="conf" class="form-in">
         <div style="padding-top: 10px"></div>
-
         <div class="container" style="color: #FF3366">
           <div class="row">
-            <div class="col" id="coli"><p class="font-normal">2 Semanas</p></div>
+            <div class="col" id="coli"><p class="font-normal">1 Semanas</p></div>
             <div class="col" id="coli"><input style="float: right" type="submit" class="dot" value="" /></div>
           </div>
 
@@ -36,12 +35,12 @@
           </div>
 
           <div class="row">
-            <div class="col" id="coli"><p class="font-normal">2 Semanas</p></div>
+            <div class="col" id="coli"><p class="font-normal">1 mes</p></div>
             <div class="col" id="coli"><input style="float: right" type="submit" class="dot-fill" value="" /></div>
           </div>
 
           <div class="row">
-            <div class="col" id="coli"><p class="font-normal">2 Semanas</p></div>
+            <div class="col" id="coli"><p class="font-normal">todos</p></div>
             <div class="col" id="coli"><input style="float: right" type="submit" class="dot-fill" value="" /></div>
           </div>
           
