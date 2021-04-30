@@ -21,6 +21,16 @@
     <h1>Bienvenido, {{name}} te esperabamos</h1>
     <router-link to="/about"></router-link> <br>
     <div id="backEventsHome">
+      <div class="container nav">
+        <div class="row align-items-center">
+          <div class="col">
+           <h1 id="h1Events" style="font-family: 'CodeNext'">mostrar <br> proximos eventos</h1>
+          </div>
+          <div class="col">
+            <img class="arr-down"  src="../assets/ui-elements/arrow-down@2x.png" alt="">
+          </div>
+        </div>
+      </div>
       <form @submit.prevent="agregarRecordatorio">
         <div class="container">
           <input type="date" v-model="fecha"/><br><br>

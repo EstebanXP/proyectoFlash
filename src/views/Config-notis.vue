@@ -20,7 +20,7 @@
     <!--aqui acaba la barra de navegacion-->
   <div class="container-fluid">
     <div id="backEvents">
-      <h1 id="h1Events">mostrar proximos eventos</h1>
+      <h1 id="h1Events" style="font-family: 'CodeNext'">mostrar <br> proximos eventos</h1>
       <form @submit.prevent="conf" class="form-in">
         <div style="padding-top: 10px"></div>
         <div class="container" style="color: #FF3366">
