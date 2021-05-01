@@ -139,6 +139,10 @@ float: right;
     float: left;
 
 }
+.arrHome{
+    float: right;
+
+}
 
 #backEventsHome{
     margin-top: 5%;
@@ -148,6 +152,19 @@ float: right;
     border-radius: 15px;
     margin-left: 10%;
     margin-right: 10%;
-    padding-top: 5%;
+    padding-top: 0%;
     padding-bottom: 5%;
+}
+
+.h1EventsHome{
+    
+    margin-left: 2em;
+    float: left;
+    text-align: -webkit-left;
+}
+
+.arr-up-down{
+    width: 20%;
+    max-width: 30px;
+    max-height: 100px;
 }

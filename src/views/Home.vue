@@ -23,11 +23,11 @@
     <div id="backEventsHome">
       <div class="container nav">
         <div class="row align-items-center">
-          <div class="col">
-           <h1 id="h1Events" style="font-family: 'CodeNext'">mostrar <br> proximos eventos</h1>
+          <div class="col-8">
+           <h1 class="h1EventsHome" id="h1Events" style="font-family: 'CodeNext'">mostrar <br> proximos eventos</h1>
           </div>
           <div class="col">
-            <img class="arr-down"  src="../assets/ui-elements/arrow-down@2x.png" alt="">
+            <img class="arrHome arr-up-down" src="../assets/ui-elements/arrow-up@2x.png" alt="">
           </div>
         </div>
       </div>
