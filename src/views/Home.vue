@@ -18,47 +18,56 @@
       </div>
     </div>
     <!--aqui acaba la barra de navegacion-->
-    <h1>Bienvenido, {{name}} te esperabamos</h1>
     <router-link to="/about"></router-link> <br>
     <div id="backEventsHome">
-      <div class="container nav">
-        <div class="row align-items-center">
+      <div class="container">
+        <div class="row" style="padding-top:.6em">
           <div class="col-8">
-           <h1 class="h1EventsHome" id="h1Events" style="font-family: 'CodeNext'">mostrar <br> proximos eventos</h1>
+           <h1 class="h1EventsHome" id="h1Events" style="font-family: 'CodeNext'">añadir un recordatorio rápido</h1>
           </div>
           <div class="col">
-            <img class="arrHome arr-up-down" src="../assets/ui-elements/arrow-up@2x.png" alt="">
+            <img class="arrHome arr-up-down arr-pad" src="../assets/ui-elements/arrow-up@2x.png" alt="">
           </div>
         </div>
       </div>
-      <form @submit.prevent="agregarRecordatorio">
-        <div class="container">
-          <input type="date" v-model="fecha"/><br><br>
-          <input type="time" v-model="hora"/><br><br>
-          <input type="input" v-model="recordatorio"/><br><br>
-          <input type="submit" value="Guardar recordatorio">
-        </div>
-      </form>
+      <div class="calendar">
+        <form @submit.prevent="agregarRecordatorio">
+          <div class="container calendar">
+            <input type="date" v-model="fecha"/><br><br>
+            <input type="time" v-model="hora"/><br><br>
+            <input type="input" v-model="recordatorio"/><br><br>
+            <input type="submit" value="Guardar recordatorio">
+          </div>
+        </form>
+      </div>
     </div>
-  
     <!-- Aqui es la mitad de la página-->
     <div class="container conf">
-      <div class="row align-items-center">
-        <div class="col">
-          <router-link to="/Config-notis">
-            <img class="settings"  src="../assets/ui-elements/Icon-Settings@2x.png" alt="">
-          </router-link>
-        </div>
-        <div class="col">
+        <div class="row">
+          <div class="col">
+
+          </div>
+          <div class="col-12">
+            <div class="row">
+              <div class="col">
+                <router-link to="/Config-notis">
+                  <img class="settings"  src="../assets/ui-elements/Icon-Settings@2x.png" alt="">
+                </router-link>
+              </div>
+              <div class="col">
           
-          <p style="color:black">próximos</p>
-          
-        </div>
-        <div class="col">
-          <img class="arr-down"  src="../assets/ui-elements/arrow-down@2x.png" alt="">
+                <h1 class="subtitles">próximos</h1>
+                
+              </div>
+              <div class="col">
+                <img class="arr-down arr-up-down"  src="../assets/ui-elements/arrow-down@2x.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="col">
+          </div>
         </div>
         
-      </div>
     </div>
     <!--Aqui van los componentes de recordatorios-->
     <h1>recordarroiso</h1>

@@ -2,7 +2,7 @@
     background: rgb(33, 43, 104);
     background: linear-gradient(180deg, rgba(33, 43, 104, 1) 0%, rgba(40, 50, 119, 1) 35%, rgba(50, 64, 159, 1) 100%);
     width: 100%;
-    
+    min-width: 340px;
     
 }
 
@@ -87,14 +87,14 @@ div#reg-head {
 .arrow{
     width: 50%;
     max-width: 70px;
-    max-height: 100px;
+    max-height: 3.5empx;
     float: left;
     padding-left: 15%;
     
 }
 
 .logo{
-    width: 17%;
+    width: 2em;
     max-width: 50px;
     text-align: center;
     vertical-align: middle;
@@ -102,24 +102,23 @@ div#reg-head {
 
 div.nav{
     height: 17%;
-    max-height: 230px;
+    max-height: 3.5em;
+    min-height: 3em;
     display: block;
     padding-top: 1%;
     padding-bottom: 1%;
 }
 
 .bell{
-    width: 40%;
-    max-width: 70px;
-    max-height: 100px;
+    max-height: 2em;
+    min-height: .8em;
     float: left;
     padding-left: 15%;
 }
 
 .add{
-    width: 38%;
-    max-width: 70px;
-    max-height: 100px;
+    max-height: 1.5em;
+    min-height: .8em;
     float: right;
     padding-right: 15%;
     
@@ -129,10 +128,8 @@ div.nav{
     height: 17%;
     max-height: 230px;
     display: block;
-}
-
-.settings{
-float: right;
+    min-width: 272px;
+    padding-top: 1em;
 }
 
 .arr-down{
@@ -145,7 +142,7 @@ float: right;
 }
 
 #backEventsHome{
-    margin-top: 5%;
+    
     background-color: #ECECEC;
     border: 2px solid rgba(147, 147, 147, 0.5);
     max-width: 80%;
@@ -154,17 +151,51 @@ float: right;
     margin-right: 10%;
     padding-top: 0%;
     padding-bottom: 5%;
+    min-width: 272px;
 }
 
 .h1EventsHome{
-    
     margin-left: 2em;
     float: left;
     text-align: -webkit-left;
+    min-width: 262px;
+    max-width: 262px;
 }
 
 .arr-up-down{
     width: 20%;
     max-width: 30px;
     max-height: 100px;
+    min-width: 1.5em;
+}
+
+.arr-pad{
+    padding-top: 5%;
+}
+
+.settings{
+    width: 20%;
+    max-width: 33px;
+    max-height: 100px;
+    min-width: 1.9em;
+    float: right;
+    margin-top: -0.05em;
+}
+
+@media (max-width: 580px) {
+    .bell, .add {
+        margin-top: 1%;
+    }
+  }
+
+.subtitles{
+    padding-top: 1%;
+    font-size: 120%;
+    font-family: "CodeNext", Arial, Helvetica, sans-serif;
+    color: #FF3366;
+    margin-left: 0%;
+}
+
+.calendar{
+    border-color: rgba(255, 255, 255, 0);
 }
