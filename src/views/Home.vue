@@ -55,9 +55,7 @@
                 </router-link>
               </div>
               <div class="col-4">
-          
                 <h1 class="subtitles">próximos</h1>
-                
               </div>
               <div class="col-2">
                 <img class="arr-down arr-up-down"  src="../assets/ui-elements/arrow-down@2x.png" alt="">
