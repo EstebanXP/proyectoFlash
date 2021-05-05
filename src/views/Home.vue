@@ -69,7 +69,7 @@
     <!--Aqui van los componentes de recordatorios-->
     <h1>recordarroiso</h1>
     <div>
-
+      <reminder/>
     </div>
   <div class="logout">
       
@@ -78,9 +78,6 @@
         Cerrar Sesión
       </button>
   </div>
-  <reminder/>
-  <reminder/>
-  <reminder/>
 </fragment>
 
 </template>

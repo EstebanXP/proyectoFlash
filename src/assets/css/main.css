@@ -200,6 +200,14 @@ div.nav{
     border-color: rgba(255, 255, 255, 0);
 }
 
-#auto-sub{
-    
+.reminderEvents{
+    background-color: #32409F;
+    border: 2px solid rgba(147, 147, 147, 0);
+    max-width: 80%;
+    border-radius: 15px;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top: 0%;
+    padding-bottom: 5%;
+    min-width: 272px;
 }

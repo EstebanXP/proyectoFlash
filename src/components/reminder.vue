@@ -1,5 +1,7 @@
 <template>
-    <h1>Hello</h1>
+    <div class="reminderEvents">
+        <h1>hOLA</h1>
+    </div>
 </template>
 
 <script>
