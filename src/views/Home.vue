@@ -47,15 +47,15 @@
           <div class="col">
 
           </div>
-          <div class="col-6">
-            <div class="row">
-              <div class="col-4">
+          <div class="col-8" style="float:center">
+            <div class="row" style="margin-left:12%">
+              <div class="col-2">
                 <router-link to="/Config-notis">
                   <img class="settings"  src="../assets/ui-elements/Icon-Settings@2x.png" alt="">
                 </router-link>
               </div>
-              <div class="col-4">
-                <h1 class="subtitles">próximos</h1>
+              <div class="col-6" style="min-width:120px">
+                <h1 class="subtitles" id="auto-sub">próximos</h1>
               </div>
               <div class="col-2">
                 <img class="arr-down arr-up-down"  src="../assets/ui-elements/arrow-down@2x.png" alt="">
@@ -65,14 +65,12 @@
           <div class="col">
           </div>
         </div>
-        
     </div>
     <!--Aqui van los componentes de recordatorios-->
     <h1>recordarroiso</h1>
     <div>
 
     </div>
-  
   <div class="logout">
       
       <button class="logout" @click="Logout"> 
@@ -80,19 +78,25 @@
         Cerrar Sesión
       </button>
   </div>
-  
-  
+  <reminder/>
+  <reminder/>
+  <reminder/>
 </fragment>
 
 </template>
 
 <script>
+import reminder from "../components/reminder.vue";
 // @ is an alias to /src
 import {ref,onBeforeMount} from 'vue';
 import firebase from 'firebase';
 //import moment from 'moment'
 
 export default {
+  name: 'App',
+  components: {
+    reminder
+  },
   setup() {
 
     const name = ref("");

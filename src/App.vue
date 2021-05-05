@@ -9,6 +9,7 @@ import { useRouter,useRoute} from 'vue-router';
 import firebase from 'firebase';
 import "./assets/css/secon.css";
 
+
 export default {
   setup(){
     const router = useRouter();
