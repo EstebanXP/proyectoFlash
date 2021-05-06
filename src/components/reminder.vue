@@ -5,5 +5,6 @@
 </template>
 
 <script>
+//import firebase from 'firebase';
 
 </script>

@@ -1,8 +1,22 @@
 <template>
-  <div class="container-fluid">
-    <div class="pad-top-events gradient">
-      <img src="../assets/logo.png" style="width: 2%; min-width: 80px" />
+  <div class="gradient">
+    <div class="container nav">
+      <div class="row align-items-center">
+        <div class="col">
+          <router-link to="/">
+            <img class="arrow"  src="../assets/ui-elements/Icon-Arrow@2x.png" alt="">
+          </router-link>
+        </div>
+        <div class="col-6">
+          <img class="logo" src="../assets/logo.png">
+        </div>
+        <div class="col">
+          
+        </div>
+      </div>
     </div>
+  </div>
+  <div class="container-fluid">
     <div id="backEvents">
       <h1 id="h1Events">notificaciones</h1>
       <div class="container" style="color: #ff3366">

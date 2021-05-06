@@ -19,26 +19,28 @@
     </div>
     <!--aqui acaba la barra de navegacion-->
     <router-link to="/about"></router-link> <br>
-    <div id="backEventsHome">
-      <div class="container">
-        <div class="row" style="padding-top:.6em">
-          <div class="col-8">
-           <h1 class="h1EventsHome" id="h1Events" style="font-family: 'CodeNext'">añadir un recordatorio rápido</h1>
+    <div class="container-fluid">
+      <div id="backEventsHome">
+        
+          <div class="row" style="padding-top:.6em">
+            <div class="col-8">
+              <h1 class="h1EventsHome" id="h1Events" style="font-family: 'CodeNext'">añadir un recordatorio rápido</h1>
+            </div>
+            <div class="col">
+              <img class="arrHome arr-up-down arr-pad" src="../assets/ui-elements/arrow-up@2x.png" alt="">
+            </div>
           </div>
-          <div class="col">
-            <img class="arrHome arr-up-down arr-pad" src="../assets/ui-elements/arrow-up@2x.png" alt="">
-          </div>
+ 
+        <div class="calendar">
+          <form @submit.prevent="agregarRecordatorio">
+            <div class="container calendar">
+              <input type="date" v-model="fecha"/><br><br>
+              <input type="time" v-model="hora"/><br><br>
+              <input type="input" v-model="recordatorio"/><br><br>
+              <input type="submit" value="Guardar recordatorio">
+            </div>
+          </form>
         </div>
-      </div>
-      <div class="calendar">
-        <form @submit.prevent="agregarRecordatorio">
-          <div class="container calendar">
-            <input type="date" v-model="fecha"/><br><br>
-            <input type="time" v-model="hora"/><br><br>
-            <input type="input" v-model="recordatorio"/><br><br>
-            <input type="submit" value="Guardar recordatorio">
-          </div>
-        </form>
       </div>
     </div>
     <!-- Aqui es la mitad de la página-->
@@ -69,6 +71,9 @@
     <!--Aqui van los componentes de recordatorios-->
     <h1>recordarroiso</h1>
     <div>
+      <reminder/>
+      <reminder/>
+      <reminder/>
       <reminder/>
     </div>
   <div class="logout">
