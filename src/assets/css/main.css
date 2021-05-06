@@ -52,6 +52,7 @@ body {
     background-color: #EEE;
     color: #FFF;
     overflow: hidden;
+    overflow-y: auto;
 }
 
 h1 {
