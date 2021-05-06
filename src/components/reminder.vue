@@ -1,10 +1,44 @@
 <template>
     <div class="reminderEvents">
-        <h1>hOLA</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1 class="h1Reminder">{{nameReminder}}</h1>
+                </div>
+            </div>
+            <div class="row">
+                <p class="pReminder">{{dayReminder}}</p>
+            </div>
+            <div class="row">
+                <div class="col-9">
+                    <h1>{{nameReminder}}</h1>
+                </div>
+                <div class="col-1">
+                    <img class="status"  src="../assets/ui-elements/status-done@2x.png" alt="">
+                </div>
+                <div class="col-1">
+                    <img class="arr-down arr-up-down"  src="../assets/ui-elements/Icon-Bin@2x.png" alt="">
+                </div>
+            </div>
+            
+        </div>
     </div>
 </template>
 
 <script>
 //import firebase from 'firebase';
+export default{
+    setup(){
+        var nameReminder = 'hola';
+        var dayReminder = 'lunes';
+        return{
+            nameReminder,
+            dayReminder,
+        }
+    },
+    
+    
+}
+
 
 </script>

@@ -90,8 +90,15 @@ div#reg-head {
     max-height: 3.5empx;
     float: left;
     padding-left: 15%;
+}
+
+.status{
+    width: 170%;
+    max-width: 1em;
+    min-width: 1em;
     
 }
+
 
 .logo{
     width: 2em;
@@ -130,6 +137,7 @@ div.nav{
     display: block;
     min-width: 272px;
     padding-top: 1em;
+    padding-bottom: 1em;
 }
 
 .arr-down{
@@ -209,7 +217,18 @@ div.nav{
     border-radius: 15px;
     margin-left: 10%;
     margin-right: 10%;
-    padding-top: 0%;
-    padding-bottom: 5%;
-    min-width: 272px;
+    margin-bottom: 2%;
+}
+
+.h1Reminder{
+    font-size: 1em;
+    float: left;
+    padding-top: .4em;
+}
+
+.pReminder{
+    padding-top: 1%;
+    font-size: 80%;
+    font-family: "CodeNext", Arial, Helvetica, sans-serif;
+    padding-left: .4em;
 }

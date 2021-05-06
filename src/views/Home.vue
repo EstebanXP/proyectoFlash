@@ -47,9 +47,8 @@
     <div class="container conf">
         <div class="row">
           <div class="col">
-
           </div>
-          <div class="col-8" style="float:center">
+          <div class="col-8">
             <div class="row" style="margin-left:12%">
               <div class="col-2">
                 <router-link to="/Config-notis">
@@ -69,7 +68,6 @@
         </div>
     </div>
     <!--Aqui van los componentes de recordatorios-->
-    <h1>recordarroiso</h1>
     <div>
       <reminder/>
       <reminder/>
@@ -77,7 +75,6 @@
       <reminder/>
     </div>
   <div class="logout">
-      
       <button class="logout" @click="Logout"> 
         <img class="arrow" src="../assets/ui-elements/Icon-Arrow@2x.png" alt="">
         Cerrar Sesión
