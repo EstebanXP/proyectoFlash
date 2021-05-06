@@ -9,9 +9,9 @@
             <div class="row">
                 <p class="pReminder">{{dayReminder}}</p>
             </div>
-            <div class="row">
+            <div class="row down-reminder">
                 <div class="col-9">
-                    <h1>{{nameReminder}}</h1>
+                    <h1 class="hourReminder">{{hourReminder}}</h1>
                 </div>
                 <div class="col-1">
                     <img class="status"  src="../assets/ui-elements/status-done@2x.png" alt="">
@@ -31,9 +31,11 @@ export default{
     setup(){
         var nameReminder = 'hola';
         var dayReminder = 'lunes';
+        var hourReminder = '12:00';
         return{
             nameReminder,
             dayReminder,
+            hourReminder,
         }
     },
     

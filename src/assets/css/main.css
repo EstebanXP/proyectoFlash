@@ -221,14 +221,25 @@ div.nav{
 }
 
 .h1Reminder{
-    font-size: 1em;
+    font-size: 1.2em;
     float: left;
     padding-top: .4em;
+    
 }
 
 .pReminder{
     padding-top: 1%;
-    font-size: 80%;
+    font-size: 1em;
     font-family: "CodeNext", Arial, Helvetica, sans-serif;
-    padding-left: .4em;
+    padding-left: 1em;
+}
+
+.hourReminder{
+    font-size: 1.5em;
+    float: left;
+    
+}
+
+.down-reminder{
+    margin-top: -1em;
 }
