@@ -28,12 +28,14 @@
 <script>
 //import firebase from 'firebase';
 export default{
+    
+    props: ['nameReminder'],
     setup(){
-        var nameReminder = 'hola';
+        
         var dayReminder = 'lunes';
         var hourReminder = '12:00';
         return{
-            nameReminder,
+            
             dayReminder,
             hourReminder,
         }

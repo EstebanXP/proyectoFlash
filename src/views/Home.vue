@@ -1,5 +1,6 @@
 <template>
   <fragment>
+    <button v-on:click="resolve">caca</button>
     <div class="gradient">
       <div class="container nav">
         <div class="row align-items-center">
@@ -69,7 +70,7 @@
     </div>
     <!--Aqui van los componentes de recordatorios-->
     <div>
-      <reminder/>
+      <reminder :nameReminder="recordatorio"/>
       <reminder/>
       <reminder/>
       <reminder/>
@@ -96,16 +97,31 @@ export default {
   components: {
     reminder
   },
+  methods: {
+    resolve: function resolveAfter2Seconds() {
+  console.log("starting slow promise")
+  return new Promise(resolve => {
+    setTimeout(function() {
+      resolve("slow")
+      console.log(firebase.auth().currentUser.uid)
+    }, 2000)
+  })
+}
+  },
   setup() {
 
     const name = ref("");
     const hora=ref("");
     const fecha=ref("");
     const recordatorio=ref("");
+    
+
+    
+    
     //let fechaFormato;
     //const horaFormato;
     onBeforeMount(()=>{
-      const user = firebase.auth().currentUser;
+       const user = firebase.auth().currentUser;
       if(user){
         name.value=user.email.split('@')[0];
       }
@@ -139,7 +155,9 @@ export default {
       agregarRecordatorio,
       hora,
       fecha,
-      recordatorio
+      recordatorio,
+      
+      
     }
   }
 }
