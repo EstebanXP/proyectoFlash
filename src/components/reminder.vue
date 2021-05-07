@@ -1,5 +1,5 @@
 <template>
-    <div class="reminderEvents">
+    <div class="reminderEvents" v-bind:class="color">
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -29,35 +29,31 @@
 import firebase from 'firebase';
 export default{
     
-    props: ['nameReminder'],
-    data(){
-        return{
-            
+    props: ['nameReminder','dayReminder', 'hourReminder', 'colorReminder'],
+    data: function(){
+    },
+    computed:{
+        color: function () {
+            return {
+                azul: this.colorReminder == 1,
+                verde: this.colorReminder == 2,
+                amarillo: this.colorReminder == 3,
+                rojo: this.colorReminder == 4,
+            }
         }
-
     },
-    methods:{
-
-    },
-
     setup(){
         
-        var dayReminder = 'lunes';
-        var hourReminder = '12:00';
-
         const getUser=()=>{
             console.log(firebase.auth().currentUser.uid);
         }
         getUser();
-        return{
+        
             
-            dayReminder,
-            hourReminder,
+        return{  
             getUser,
         }
     },
-    
-    
 }
 
 
