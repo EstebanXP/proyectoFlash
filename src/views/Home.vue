@@ -70,8 +70,8 @@
     </div>
     <!--Aqui van los componentes de recordatorios-->
     <div>
-      <reminder v-bind="reminderProps"/>
-      <reminder colorReminder=4 />
+      <reminder :nameReminder="recordatorio"/>
+      <reminder/>
       <reminder/>
       <reminder/>
     </div>
@@ -97,12 +97,6 @@ export default {
   components: {
     reminder,
     //recordatorio:[],
-  },
-  reminderProps: {
-    nameReminder: 'Hello' ,
-    dayReminder:  'Hi',
-    hourReminder: 'Hola',
-    colorReminder: 2,
   },
   methods: {
     getUser() {

@@ -212,28 +212,13 @@ div.nav{
 }
 
 .reminderEvents{
-    background-color: #575757;
+    background-color: #32409F;
     border: 2px solid rgba(147, 147, 147, 0);
     max-width: 80%;
     border-radius: 15px;
     margin-left: 10%;
     margin-right: 10%;
     margin-bottom: 2%;
-}
-
-.azul{
-    background-color: #32409F;
-}
-.amarillo{
-    background-color: #EBC409;
-}
-
-.verde{
-    background-color: #00BF9A;
-}
-
-.rojo{
-    background-color: #FF3366;
 }
 
 .h1Reminder{
