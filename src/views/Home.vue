@@ -1,6 +1,6 @@
 <template>
   <fragment>
-    <button v-on:click="mostrarUsuarios">caca</button>
+    <button v-on:click="getUser">caca</button>
     <div class="gradient">
       <div class="container nav">
         <div class="row align-items-center">
@@ -90,8 +90,6 @@ import reminder from "../components/reminder.vue";
 // @ is an alias to /src
 import {ref,onBeforeMount} from 'vue';
 import firebase from 'firebase';
-import {bdd} from '../main.js'
-
 //import moment from 'moment'
 
 export default {
@@ -106,25 +104,13 @@ export default {
     hourReminder: 'Hola',
     colorReminder: 2,
   },
-  data(){
-    return{
-      records:[],
-    }
-  },
   methods: {
     getUser() {
-      return firebase.auth().currentUser.uid;
+      console.log(firebase.auth().currentUser.uid);
     },
-    mostrarUsuarios(){
-      console.log(this.records)
-    }
   },
   mounted() {
-    bdd.collection('usuarios').doc(this.getUser()).collection('recordatorios').get().then((querySnapshot) => {
-      querySnapshot.forEach((doc) => {
-        this.records.push(doc.data());
-      });
-    });
+    
   },
   setup() {
     const name = ref("");

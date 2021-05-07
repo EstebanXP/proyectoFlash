@@ -41,7 +41,6 @@
 import {ref} from 'vue';
 import firebase from 'firebase';
 
-
 export default {
     setup(){
         const email = ref("");
