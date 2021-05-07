@@ -26,7 +26,7 @@
 </template>
 
 <script>
-import firebase from 'firebase';
+//import firebase from 'firebase';
 export default{
     
     props: ['nameReminder'],
@@ -34,16 +34,10 @@ export default{
         
         var dayReminder = 'lunes';
         var hourReminder = '12:00';
-
-        const getUser=()=>{
-            console.log(firebase.auth().currentUser.uid+"prenda del alma");
-        }
-        getUser();
         return{
             
             dayReminder,
             hourReminder,
-            getUser,
         }
     },
     

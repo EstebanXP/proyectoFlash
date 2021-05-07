@@ -98,7 +98,15 @@ export default {
     reminder
   },
   methods: {
-    
+    resolve: function resolveAfter2Seconds() {
+  console.log("starting slow promise")
+  return new Promise(resolve => {
+    setTimeout(function() {
+      resolve("slow")
+      console.log(firebase.auth().currentUser.uid)
+    }, 2000)
+  })
+}
   },
   setup() {
 
