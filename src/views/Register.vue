@@ -31,7 +31,8 @@
 <script>
 import firebase from 'firebase';
 import {ref} from 'vue';
-const db=firebase.firestore();
+import {bdd} from '../main.js'
+//const db=firebase.firestore();
 
 export default {
     setup() {
@@ -45,7 +46,7 @@ export default {
                 .auth()
                 .createUserWithEmailAndPassword(email.value, password.value)
                 .then(cred=>{
-                    return db.collection('usuarios').doc(cred.user.uid).set({
+                    return bdd.collection('usuarios').doc(cred.user.uid).set({
                         emailU : email.value
                     });
                 })
