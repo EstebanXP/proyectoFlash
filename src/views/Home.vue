@@ -1,6 +1,6 @@
 <template>
   <fragment>
-    <button v-on:click="resolve">caca</button>
+    <button v-on:click="getUser">caca</button>
     <div class="gradient">
       <div class="container nav">
         <div class="row align-items-center">
@@ -95,21 +95,23 @@ import firebase from 'firebase';
 export default {
   name: 'App',
   components: {
-    reminder
+    reminder,
+    //recordatorio:[],
   },
   methods: {
+    getUser() {
+      console.log(firebase.auth().currentUser.uid);
+    },
+  },
+  mounted() {
     
   },
   setup() {
-
     const name = ref("");
     const hora=ref("");
     const fecha=ref("");
     const recordatorio=ref("");
-    
 
-    
-    
     //let fechaFormato;
     //const horaFormato;
     onBeforeMount(()=>{

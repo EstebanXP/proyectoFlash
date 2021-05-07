@@ -30,13 +30,23 @@ import firebase from 'firebase';
 export default{
     
     props: ['nameReminder'],
+    data(){
+        return{
+            
+        }
+
+    },
+    methods:{
+
+    },
+
     setup(){
         
         var dayReminder = 'lunes';
         var hourReminder = '12:00';
 
         const getUser=()=>{
-            console.log(firebase.auth().currentUser.uid+"prenda del alma");
+            console.log(firebase.auth().currentUser.uid);
         }
         getUser();
         return{
