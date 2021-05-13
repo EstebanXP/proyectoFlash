@@ -28,9 +28,12 @@
 <script>
 import firebase from 'firebase';
 export default{
-    
+    name:"reminder",
     props: ['nameReminder','dayReminder', 'hourReminder', 'colorReminder'],
-    data: function(){
+    data(){
+        return{
+
+        }
     },
     computed:{
         color: function () {

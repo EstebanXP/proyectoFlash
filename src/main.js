@@ -18,9 +18,8 @@ firebase.initializeApp(firebaseConfig);
 export const bdd = firebase.firestore();
 
 let app;
-firebase.auth().onAuthStateChanged(user => {
-
-    if (!app && user) {
+firebase.auth().onAuthStateChanged(() => {
+    if (!app) {
         app = createApp(App).use(router).mount('#app');
     }
 })

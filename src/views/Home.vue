@@ -69,11 +69,15 @@
         </div>
     </div>
     <!--Aqui van los componentes de recordatorios-->
-    <div>
-      <reminder v-bind="reminderProps"/>
-      <reminder colorReminder=4 />
-      <reminder/>
-      <reminder/>
+    <div >
+     <reminder v-for="item in records" :key="item.id" v-bind:nameReminder="item.recordatorio" 
+     v-bind:dayReminder="item.fecha.seconds"
+     v-bind:hourReminder="item.fecha.seconds"
+     v-bind:colorReminder="item.color"
+     >
+
+     </reminder>
+
     </div>
   <div class="logout">
       <button class="logout" @click="Logout"> 
@@ -98,7 +102,7 @@ export default {
   name: 'App',
   components: {
     reminder,
-    //recordatorio:[],
+    
   },
   reminderProps: {
     nameReminder: 'Hello' ,
@@ -120,27 +124,34 @@ export default {
     }
   },
   mounted() {
+    console.log("Entra mounted");
+    
     bdd.collection('usuarios').doc(this.getUser()).collection('recordatorios').get().then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
         this.records.push(doc.data());
       });
     });
+    this.mostrarUsuarios();
   },
+  
   setup() {
     const name = ref("");
     const hora=ref("");
     const fecha=ref("");
     const recordatorio=ref("");
-
+    var records1 = [];
     //let fechaFormato;
     //const horaFormato;
-    onBeforeMount(()=>{
-       const user = firebase.auth().currentUser;
-      if(user){
-        name.value=user.email.split('@')[0];
-      }
-    });
+    /*function getUser1() {
+      return firebase.auth().currentUser.uid;
+    }*/
 
+    
+
+    onBeforeMount(()=>{
+      console.log("Entra OnBeforeMount");
+    }
+      )
     const agregarRecordatorio=  ()=>{
         const user1 = firebase.auth().currentUser.uid;
         
@@ -163,6 +174,12 @@ export default {
         .catch(err=>alert(err.message));
     } 
 
+    const prueba = () =>{
+      console.log(firebase.auth().currentUser.uid+"weqwe");
+      console.log(records1);
+    }
+
+
     return{
       name,
       Logout,
@@ -170,8 +187,7 @@ export default {
       hora,
       fecha,
       recordatorio,
-      
-      
+      prueba
     }
   }
 }
