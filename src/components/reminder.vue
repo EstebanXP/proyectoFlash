@@ -11,7 +11,7 @@
             </div>
             <div class="row down-reminder">
                 <div class="col-9">
-                    <h1 class="hourReminder">{{hourReminder}}</h1>
+                    <h1 class="hourReminder">{{hourReminder}}- {{reminderId}}</h1>
                 </div>
                 <div class="col-1">
                     <img class="status"  src="../assets/ui-elements/status-done@2x.png" alt="">
@@ -26,13 +26,13 @@
 </template>
 
 <script>
-import firebase from 'firebase';
+//import firebase from 'firebase';
 export default{
     name:"reminder",
-    props: ['nameReminder','dayReminder', 'hourReminder', 'colorReminder'],
+    props: ['nameReminder','dayReminder', 'hourReminder', 'colorReminder','reminderId'],
     data(){
         return{
-
+            fecha:this.dayReminder,
         }
     },
     computed:{
@@ -45,16 +45,39 @@ export default{
             }
         }
     },
-    setup(){
-        
-        const getUser=()=>{
-            console.log(firebase.auth().currentUser.uid);
+    mounted(){
+        var tis=this;
+        function changeDate(){
+            var dia=new Date(tis.fecha*1000);
+            return dia.getDay();
         }
-        getUser();
+        function getDay(){
+            switch(changeDate()){
+            case 1: console.log("Lunes");
+                break;
+            case 2: console.log("Martes");
+                break;
+            case 3: console.log("Miercoles");
+                break;
+            case 4: console.log("Jueves");
+                break;
+            case 5: console.log("Viernes");
+                break;
+            case 6: console.log("Sabado");
+                break;
+            case 7: console.log("Domingo");
+                break;
+        }
+        }
+        getDay();
+        
+        
+    },
+    setup(){
         
             
         return{  
-            getUser,
+        
         }
     },
 }

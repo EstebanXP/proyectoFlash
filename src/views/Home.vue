@@ -74,6 +74,7 @@
      v-bind:dayReminder="item.fecha.seconds"
      v-bind:hourReminder="item.fecha.seconds"
      v-bind:colorReminder="item.color"
+     v-bind:reminderId="item.id"
      >
 
      </reminder>
@@ -113,6 +114,7 @@ export default {
   data(){
     return{
       records:[],
+      
     }
   },
   methods: {
@@ -125,12 +127,25 @@ export default {
   },
   mounted() {
     console.log("Entra mounted");
+    const tis=this;
     
-    bdd.collection('usuarios').doc(this.getUser()).collection('recordatorios').get().then((querySnapshot) => {
+    /*bdd.collection('usuarios').doc(this.getUser()).collection('recordatorios').get().then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
         this.records.push(doc.data());
       });
-    });
+    });*/
+    bdd.collection('usuarios').doc(this.getUser()).collection('recordatorios').onSnapshot(function(snap){
+      snap.forEach(doc=>{
+        console.log(doc.data())
+        console.log(doc.id);
+        let aux;
+        aux=doc.data();
+        aux.id=doc.id;
+        tis.records.push(aux);
+      });
+    })
+  
+    
     this.mostrarUsuarios();
   },
   
