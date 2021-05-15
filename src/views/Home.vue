@@ -5,15 +5,17 @@
       <div class="container nav">
         <div class="row align-items-center">
           <div class="col">
-            <router-link to="/Time-notis">
-              <img class="bell"  src="../assets/ui-elements/Icon-Bell@2x.png" alt="">
+            <router-link to="/login" @click="Logout">
+              <img class="arrow"  src="../assets/ui-elements/Icon-Arrow@2x.png" alt="">
             </router-link>
           </div>
           <div class="col-6">
             <img class="logo" src="../assets/logo.png">
           </div>
           <div class="col">
-            <img class="add"  src="../assets/ui-elements/Icon-Add@2x.png" alt="">
+            <router-link to="/Config-notis">
+              <img class="bell"  src="../assets/ui-elements/Icon-Bell@2x.png" alt="">
+            </router-link>
           </div>
         </div>
       </div>
@@ -52,7 +54,7 @@
           <div class="col-8">
             <div class="row" style="margin-left:12%">
               <div class="col-2">
-                <router-link to="/Config-notis">
+                <router-link to="/Edit">
                   <img class="settings"  src="../assets/ui-elements/Icon-Settings@2x.png" alt="">
                 </router-link>
               </div>
@@ -80,12 +82,7 @@
      </reminder>
 
     </div>
-  <div class="logout">
-      <button class="logout" @click="Logout"> 
-        <img class="arrow" src="../assets/ui-elements/Icon-Arrow@2x.png" alt="">
-        Cerrar Sesión
-      </button>
-  </div>
+  
 </fragment>
 
 </template>

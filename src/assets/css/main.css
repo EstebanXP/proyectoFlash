@@ -120,8 +120,8 @@ div.nav{
 .bell{
     max-height: 2em;
     min-height: .8em;
-    float: left;
-    padding-left: 15%;
+    float: right;
+    padding-right: 5%;
 }
 
 .add{

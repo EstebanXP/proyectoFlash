@@ -37,10 +37,10 @@ const routes = [{
     },
 
     {
-        path: '/Time-notis',
-        name: 'time-notis',
+        path: '/Edit',
+        name: 'Edit',
         component: () =>
-            import ('../views/Time-notis.vue')
+            import ('../views/Edit.vue')
     }
 
 ]
