@@ -7,7 +7,7 @@
                 </div>
             </div>
             <div class="row">
-                <p class="pReminder">{{dayReminder}}</p>
+                <p class="pReminder">{{getDay()}}</p>
             </div>
             <div class="row down-reminder">
                 <div class="col-9">
@@ -30,6 +30,7 @@ import firebase from 'firebase';
 import {bdd} from '../main.js'
 //import swal from 'sweetalert';
 import Swal from 'sweetalert2'
+
 export default{
     name:"reminder",
     props: ['nameReminder','dayReminder', 'hourReminder', 'colorReminder','reminderId'],
@@ -94,7 +95,29 @@ export default{
                     )
                 }
                 })
-        }
+        },
+        changeDate(){
+            var dia=new Date(this.fecha*1000);
+            return dia.getDay();
+        },
+        getDay(){
+            switch(this.changeDate()){
+            case 1: console.log("Lunes");
+                return "lunes";
+            case 2: console.log("Martes");
+                return "martes";
+            case 3: console.log("Miercoles");
+                return "miercoles";
+            case 4: console.log("Jueves");
+                return "jueves";
+            case 5: console.log("Viernes");
+                return "viernes";
+            case 6: console.log("Sabado");
+                return "sabado";
+            case 7: console.log("Domingo");
+                return "domingo";
+            }
+        },
     },
     computed:{
         color: function () {
@@ -104,33 +127,9 @@ export default{
                 amarillo: this.colorReminder == 3,
                 rojo: this.colorReminder == 4,
             }
-        }
+        },
     },
     mounted(){
-        var tis=this;
-        function changeDate(){
-            var dia=new Date(tis.fecha*1000);
-            return dia.getDay();
-        }
-        function getDay(){
-            switch(changeDate()){
-            case 1: console.log("Lunes");
-                break;
-            case 2: console.log("Martes");
-                break;
-            case 3: console.log("Miercoles");
-                break;
-            case 4: console.log("Jueves");
-                break;
-            case 5: console.log("Viernes");
-                break;
-            case 6: console.log("Sabado");
-                break;
-            case 7: console.log("Domingo");
-                break;
-        }
-        }
-        getDay();
         
         
     },
