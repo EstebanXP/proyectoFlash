@@ -66,6 +66,11 @@ export default{
                         fecha:firebase.firestore.Timestamp.fromDate(new Date(result.value.fAux+"T"+result.value.hAux)),
                     })
                     //Aqui termina el if
+                    Swal.fire(
+                        'Editado!',
+                        'El recordatorio a sido editado con exito.',
+                        'success'
+                    )
                 }
             })
         },
