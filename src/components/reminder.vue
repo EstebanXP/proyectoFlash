@@ -11,7 +11,7 @@
             </div>
             <div class="row down-reminder">
                 <div class="col-9">
-                    <h1 class="hourReminder">{{hourReminder}}</h1>
+                    <h1 class="hourReminder">{{horas()}}</h1>
                 </div>
                 <div class="col-1">
                     <img class="status"  src="../assets/ui-elements/status-done@2x.png" alt="" @click="editarRecordatorios(this.reminderId)">
@@ -118,6 +118,17 @@ export default{
                 return "domingo";
             }
         },
+        horas() {
+            var minutos;
+            var dia=new Date(this.fecha*1000);
+            if (dia.getMinutes()<=9) {
+                minutos = '0' + dia.getMinutes(); 
+            }else{
+                minutos = dia.getMinutes(); 
+            }
+            var horas = dia.getHours() + ':' + minutos ;
+            return horas;
+        }
     },
     computed:{
         color: function () {
@@ -130,7 +141,6 @@ export default{
         },
     },
     mounted(){
-        
         
     },
     setup(){
