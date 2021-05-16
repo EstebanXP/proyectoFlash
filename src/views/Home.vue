@@ -37,9 +37,9 @@
         <div class="calendar">
           <form @submit.prevent="agregarRecordatorio">
             <div class="container calendar">
-              <input type="date" v-model="fecha"/><br><br>
-              <input type="time" v-model="hora"/><br><br>
-              <input type="input" v-model="recordatorio"/><br><br>
+              <input type="date" id = "fecha" v-model="fecha"/><br><br>
+              <input type="time" id="hora" v-model="hora"/><br><br>
+              <input type="input" id ="recordatorio" v-model="recordatorio"/><br><br>
               <input type="submit" value="Guardar recordatorio">
             </div>
           </form>
@@ -177,6 +177,7 @@ export default {
           
        });
         
+      document.getElementById("recordatorio").innerHTML="";
     }
      
 

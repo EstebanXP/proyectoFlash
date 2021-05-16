@@ -17,6 +17,7 @@ firebase.initializeApp(firebaseConfig);
 
 export const bdd = firebase.firestore();
 
+
 let app;
 firebase.auth().onAuthStateChanged(() => {
     if (!app) {
