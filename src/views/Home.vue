@@ -94,6 +94,7 @@ import {ref,onBeforeMount} from 'vue';
 import firebase from 'firebase';
 import {bdd} from '../main.js'
 
+
 //import moment from 'moment'
 
 export default {
@@ -120,7 +121,8 @@ export default {
     },
     mostrarUsuarios(){
       console.log(this.records)
-    }
+    },
+    
   },
   mounted() {
     console.log("Entra mounted");

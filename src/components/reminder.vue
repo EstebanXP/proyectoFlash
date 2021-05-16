@@ -14,7 +14,7 @@
                     <h1 class="hourReminder">{{hourReminder}}- {{reminderId}}</h1>
                 </div>
                 <div class="col-1">
-                    <img class="status"  src="../assets/ui-elements/status-done@2x.png" alt="">
+                    <img class="status"  src="../assets/ui-elements/status-done@2x.png" alt="" @click="editarRecordatorios()">
                 </div>
                 <div class="col-1">
                     <img class="arr-down arr-up-down"  src="../assets/ui-elements/Icon-Bin@2x.png" alt="">
@@ -27,12 +27,39 @@
 
 <script>
 //import firebase from 'firebase';
+//import swal from 'sweetalert';
+import Swal from 'sweetalert2'
 export default{
     name:"reminder",
     props: ['nameReminder','dayReminder', 'hourReminder', 'colorReminder','reminderId'],
     data(){
         return{
             fecha:this.dayReminder,
+        }
+    },
+    methods: {
+        editarRecordatorios(){
+            Swal.fire({
+               title: 'Login Form',
+                html: `<input type="text" id="rAux" class="swal2-input" placeholder="Username">
+                <input type="date" id="fAux" class="swal2-input" placeholder="Password">
+                <input type="time" id="hAux" class="swal2-input" placeholder="Password">`,
+                showCancelButton: true,
+                confirmButtonText: `Save`,
+                denyButtonText: `Don't save`,
+                preConfirm: () => {
+                const recAux = Swal.getPopup().querySelector('#rAux').value
+                const fechAux = Swal.getPopup().querySelector('#fAux').value
+                const horaAux = Swal.getPopup().querySelector('#hAux').value
+                console.log(recAux+fechAux+horaAux);
+                return { rAux:recAux,fAux:fechAux,hAux:horaAux}
+            }
+            }).then((result)=>{
+                if(result.isConfirmed){
+                    console.log(result.value.rAux)
+                   
+                }
+            })
         }
     },
     computed:{
