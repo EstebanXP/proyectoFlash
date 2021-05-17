@@ -1,6 +1,5 @@
 <template>
   <fragment>
-    <button v-on:click="mostrarUsuarios">caca</button>
     <div class="gradient">
       <div class="container nav">
         <div class="row align-items-center">
@@ -13,7 +12,7 @@
             <img class="logo" src="../assets/logo.png">
           </div>
           <div class="col">
-            <router-link to="/Config-notis">
+            <router-link to="/Edit">
               <img class="bell"  src="../assets/ui-elements/Icon-Bell@2x.png" alt="">
             </router-link>
           </div>
