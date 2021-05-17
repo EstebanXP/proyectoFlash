@@ -101,42 +101,53 @@ export default{
             return dia.getDay();
         },
         getDay(){
+            var dia=new Date(this.fecha*1000);
             switch(this.changeDate()){
-            case 1: console.log("Lunes");
-                return "lunes";
+            case 1: console.log("Lunes" + dia.getDate());
+                return "lunes" + ' ' + dia.getDate();
             case 2: console.log("Martes");
-                return "martes";
+                return "martes" + ' ' + dia.getDate();
             case 3: console.log("Miercoles");
-                return "miercoles";
+                return "miercoles" + ' ' + dia.getDate();
             case 4: console.log("Jueves");
-                return "jueves";
+                return "jueves" + ' ' + dia.getDate();
             case 5: console.log("Viernes");
-                return "viernes";
+                return "viernes" + ' ' + dia.getDate();
             case 6: console.log("Sabado");
-                return "sabado";
+                return "sabado" + ' ' + dia.getDate();
             case 7: console.log("Domingo");
-                return "domingo";
+                return "domingo" + ' ' + dia.getDate();
             }
         },
         horas() {
             var minutos;
             var dia=new Date(this.fecha*1000);
+            var horas;
             if (dia.getMinutes()<=9) {
                 minutos = '0' + dia.getMinutes(); 
             }else{
                 minutos = dia.getMinutes(); 
             }
-            var horas = dia.getHours() + ':' + minutos ;
+            if(dia< Date.now()){
+                horas = "vencida";
+                console.log('si mamo');
+            }
+            else{
+                horas = dia.getHours() + ':' + minutos ;
+            }
+            
             return horas;
         }
     },
     computed:{
         color: function () {
+            var diaRae=new Date(this.fecha*1000)/(1000*60*60);
+            var diaNew = (Date.now()/(1000*60*60));
+            var diares = diaRae - diaNew;
             return {
-                azul: this.colorReminder == 1,
-                verde: this.colorReminder == 2,
-                amarillo: this.colorReminder == 3,
-                rojo: this.colorReminder == 4,
+                verde: diares >= 72,
+                amarillo: diares >= 36 && diares <72,
+                rojo: diares < 36,
             }
         },
     },

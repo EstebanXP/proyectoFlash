@@ -133,7 +133,7 @@ export default {
         this.records.push(doc.data());
       });
     });*/
-    bdd.collection('usuarios').doc(this.getUser()).collection('recordatorios').onSnapshot(function(snap){
+    bdd.collection('usuarios').doc(this.getUser()).collection('recordatorios').orderBy("fecha").onSnapshot(function(snap){
       snap.forEach(doc=>{
         console.log(doc.data())
         console.log(doc.id);
