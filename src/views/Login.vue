@@ -51,7 +51,7 @@ export default {
             firebase
                 .auth()
                 .signInWithEmailAndPassword(email.value,password.value)
-                .then(data=>console.log(data))
+                .then(()=>{})
                 .catch(err=>alert(err.message))
         }
         //Esta es la funcion que hace que jale el login con gmail
