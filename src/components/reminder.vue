@@ -62,16 +62,28 @@ export default{
             }
             }).then(result=>{
                 if(result.isConfirmed){
-                    bdd.collection('usuarios').doc(user1).collection('recordatorios').doc(idRecor).update({
-                        recordatorio:result.value.rAux,
-                        fecha:firebase.firestore.Timestamp.fromDate(new Date(result.value.fAux+"T"+result.value.hAux)),
-                    })
-                    //Aqui termina el if
-                    Swal.fire(
-                        'Editado!',
-                        'El recordatorio a sido editado con exito.',
-                        'success'
-                    )
+                    Swal.fire({
+                        title: 'Estas seguro?',
+                        text: "Los cambios no podran ser revertidos!",
+                        icon: 'warning',
+                        showCancelButton: true,
+                        confirmButtonColor: '#2CBA0D',
+                        cancelButtonColor: '#DD6B55',
+                        confirmButtonText: 'Si, quiero continuar!',
+                        cancelButtonText: 'Cancelar',
+                        }).then((result1) => {
+                        if (result1.isConfirmed) {
+                            bdd.collection('usuarios').doc(user1).collection('recordatorios').doc(idRecor).update({
+                                recordatorio:result.value.rAux,
+                                fecha:firebase.firestore.Timestamp.fromDate(new Date(result.value.fAux+"T"+result.value.hAux)),
+                            })
+                            Swal.fire(
+                            'Edicion finalizada!',
+                            'El archivo a sido editado con exito.',
+                            'success'
+                            )
+                        }
+                        })
                 }
             })
         },
@@ -86,6 +98,7 @@ export default{
                 cancelButtonColor: '#d33',
                 confirmButtonText: 'Si, quiero borrarlo!'
                 }).then((result) => {
+                    
                 if (result.isConfirmed) {
                 bdd.collection("usuarios").doc(user1).collection("recordatorios").doc(idRecor).delete();
                     Swal.fire(
@@ -103,19 +116,19 @@ export default{
         getDay(){
             var dia=new Date(this.fecha*1000);
             switch(this.changeDate()){
-            case 1: console.log("Lunes" + dia.getDate());
+            case 1: 
                 return "lunes" + ' ' + dia.getDate();
-            case 2: console.log("Martes");
+            case 2: 
                 return "martes" + ' ' + dia.getDate();
-            case 3: console.log("Miercoles");
+            case 3: 
                 return "miercoles" + ' ' + dia.getDate();
-            case 4: console.log("Jueves");
+            case 4: 
                 return "jueves" + ' ' + dia.getDate();
-            case 5: console.log("Viernes");
+            case 5: 
                 return "viernes" + ' ' + dia.getDate();
-            case 6: console.log("Sabado");
+            case 6: 
                 return "sabado" + ' ' + dia.getDate();
-            case 7: console.log("Domingo");
+            case 7: 
                 return "domingo" + ' ' + dia.getDate();
             }
         },
@@ -130,7 +143,6 @@ export default{
             }
             if(dia< Date.now()){
                 horas = "vencida";
-                console.log('si mamo');
             }
             else{
                 horas = dia.getHours() + ':' + minutos ;

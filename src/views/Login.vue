@@ -57,8 +57,8 @@ export default {
         //Esta es la funcion que hace que jale el login con gmail
         const LoginG=()=>{
             const provider= new firebase.auth.GoogleAuthProvider();
-            firebase.auth().signInWithPopup(provider).then(()=>{
-                alert("Sesion iniciada");
+            firebase.auth().signInWithPopup(provider).then((/*result*/)=>{
+                //console.log(result.user.email+"POPO");
             }).catch(err=>{
                 console.log(err);
             });

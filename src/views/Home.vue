@@ -118,24 +118,13 @@ export default {
     getUser() {
       return firebase.auth().currentUser.uid;
     },
-    mostrarUsuarios(){
-      console.log(this.records)
-    },
     
   },
   mounted() {
-    console.log("Entra mounted");
     const tis=this;
     
-    /*bdd.collection('usuarios').doc(this.getUser()).collection('recordatorios').get().then((querySnapshot) => {
-      querySnapshot.forEach((doc) => {
-        this.records.push(doc.data());
-      });
-    });*/
     bdd.collection('usuarios').doc(this.getUser()).collection('recordatorios').orderBy("fecha").onSnapshot(function(snap){
       snap.forEach(doc=>{
-        console.log(doc.data())
-        console.log(doc.id);
         let aux;
         aux=doc.data();
         aux.id=doc.id;
@@ -143,8 +132,6 @@ export default {
       });
     })
   
-    
-    this.mostrarUsuarios();
   },
   
   setup() {
@@ -153,21 +140,13 @@ export default {
     const fecha=ref("");
     const recordatorio=ref("");
     var records1 = [];
-    //let fechaFormato;
-    //const horaFormato;
-    /*function getUser1() {
-      return firebase.auth().currentUser.uid;
-    }*/
-
-    
 
     onBeforeMount(()=>{
-      console.log("Entra OnBeforeMount");
     }
       )
     const agregarRecordatorio=  ()=>{
         const user1 = firebase.auth().currentUser.uid;
-        
+
        firebase.firestore().collection('usuarios').doc(user1).collection('recordatorios').doc().set({
           recordatorio:recordatorio.value,
           color:1,
