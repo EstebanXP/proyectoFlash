@@ -71,7 +71,7 @@
     </div>
     <!--Aqui van los componentes de recordatorios-->
     <div >
-     <reminder v-for="item in records" :key="item.id" v-bind:nameReminder="item.recordatorio" 
+     <reminder v-for="item in arre" :key="item.id" v-bind:nameReminder="item.recordatorio" 
      v-bind:dayReminder="item.fecha.seconds"
      v-bind:hourReminder="item.fecha.seconds"
      v-bind:colorReminder="item.color"
@@ -89,10 +89,9 @@
 <script>
 import reminder from "../components/reminder.vue";
 // @ is an alias to /src
-import {ref,onBeforeMount} from 'vue';
+import {ref} from 'vue';
 import firebase from 'firebase';
-import {bdd} from '../main.js'
-
+import {loadRercords} from '../main.js'
 
 //import moment from 'moment'
 
@@ -110,8 +109,6 @@ export default {
   },
   data(){
     return{
-      records:[],
-      
     }
   },
   methods: {
@@ -121,17 +118,6 @@ export default {
     
   },
   mounted() {
-    const tis=this;
-    
-    bdd.collection('usuarios').doc(this.getUser()).collection('recordatorios').orderBy("fecha").onSnapshot(function(snap){
-      snap.forEach(doc=>{
-        let aux;
-        aux=doc.data();
-        aux.id=doc.id;
-        tis.records.push(aux);
-      });
-    })
-  
   },
   
   setup() {
@@ -139,13 +125,13 @@ export default {
     const hora=ref("");
     const fecha=ref("");
     const recordatorio=ref("");
-    var records1 = [];
+    const user1=firebase.auth().currentUser.uid;
+    var arre=[];
+    arre=loadRercords(user1);
 
-    onBeforeMount(()=>{
-    }
-      )
-    const agregarRecordatorio=  ()=>{
-        const user1 = firebase.auth().currentUser.uid;
+    
+    const agregarRecordatorio= async ()=>{
+        const user1 =await firebase.auth().currentUser.uid;
 
        firebase.firestore().collection('usuarios').doc(user1).collection('recordatorios').doc().set({
           recordatorio:recordatorio.value,
@@ -155,7 +141,7 @@ export default {
           
        });
         
-      document.getElementById("recordatorio").innerHTML="";
+      
     }
      
 
@@ -167,11 +153,7 @@ export default {
         .catch(err=>alert(err.message));
     } 
 
-    const prueba = () =>{
-      console.log(firebase.auth().currentUser.uid+"weqwe");
-      console.log(records1);
-    }
-
+    
 
     return{
       name,
@@ -180,7 +162,8 @@ export default {
       hora,
       fecha,
       recordatorio,
-      prueba
+      arre,
+      user1
     }
   }
 }

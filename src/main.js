@@ -3,6 +3,7 @@ import App from './App.vue'
 import router from './router'
 import firebase from 'firebase'
 import './assets/css/main.css'
+import  {ref,onUnmounted} from 'vue';
 
 const firebaseConfig = {
     apiKey: "AIzaSyA1AHqjm0mQxyGRzgyAePdmL0DW6iqdBN4",
@@ -17,6 +18,14 @@ firebase.initializeApp(firebaseConfig);
 
 export const bdd = firebase.firestore();
 
+export const loadRercords = (idU)=>{
+    const arre =ref([]);
+    const close = bdd.collection('usuarios').doc(idU).collection('recordatorios').orderBy("fecha").onSnapshot(snapshot =>{
+        arre.value =snapshot.docs.map(doc=>({id: doc.id, ...doc.data()}))
+    })
+    onUnmounted(close);
+    return arre;
+}
 
 let app;
 firebase.auth().onAuthStateChanged(() => {
