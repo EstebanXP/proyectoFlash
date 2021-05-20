@@ -29,7 +29,7 @@
               <h1 class="h1EventsHome" id="h1Events" style="font-family: 'CodeNext'">añadir un recordatorio rápido</h1>
             </div>
             <div class="col">
-              <img class="arrHome arr-up-down arr-pad" src="../assets/ui-elements/arrow-up@2x.png" alt="">
+              
             </div>
           </div>
  
@@ -58,10 +58,10 @@
                 </router-link>
               </div>
               <div class="col-6" style="min-width:120px">
-                <h1 class="subtitles" id="auto-sub">próximos</h1>
+                <h1 class="subtitles" id="auto-sub">Próximos</h1>
               </div>
               <div class="col-2">
-                <img class="arr-down arr-up-down"  src="../assets/ui-elements/arrow-down@2x.png" alt="">
+                
               </div>
             </div>
           </div>
